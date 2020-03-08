@@ -243,8 +243,12 @@ jQuery(function($) {
   });
   
   // Sticky Header
-  if (scroll >= 34) {
-    $(".header").addClass("stick");
-  }
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+	
+    if (scroll >= 34) {
+      $(".header").addClass("stick");
+    }
+  });
   
 });
