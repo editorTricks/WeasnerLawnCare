@@ -186,14 +186,13 @@ img {
 .banner .container {
   display: none;
   max-width: 1000px;
-  padding: 198.98px 20px 140px;
+  padding: 276px 20px 218px;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 2;
   text-align: center;
-  height: 70vh;
 }
 .banner .container.show {
   display: flex;
@@ -797,7 +796,6 @@ img {
   /* Banner */
   .banner .container {
     padding: 63.98px 20px 140px;
-    height: 60vh;
   }
   .banner h1 {
     font-size: 60px;
@@ -842,9 +840,6 @@ img {
     font-size: 42px;
   }
   /* Banner */
-  .banner .container {
-    height: 50vh;
-  }
   .banner h1 {
     font-size: 38px;
   }
