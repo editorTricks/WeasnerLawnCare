@@ -227,6 +227,7 @@ img {
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
+  pointer-events: none;
 }
 .logoNavigation li a:hover {
   color: #2abe0b;
