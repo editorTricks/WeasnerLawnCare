@@ -985,6 +985,7 @@ img {
   /* Services */
   .services .container {
     flex-wrap: wrap;
+	padding: 0px 20px 40px;
   }
   .services a {
     font-size: 13px;
@@ -1000,9 +1001,20 @@ img {
   .locationLeftH2Two {
     font-size: 30px;
   }
+  /* Price Calculator */
+  .priceCalculator .container {
+    padding: 40px 20px 140px;
+  }
   /* About */
+  .about .container {
+    padding: 40px 20px;
+  }
   .about img {
     height: 250px;
     width: 250px;
+  }
+  /* Contact */
+  .contact .container {
+    padding: 40px 20px;
   }
 }
