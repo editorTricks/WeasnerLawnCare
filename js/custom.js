@@ -216,23 +216,23 @@ jQuery(function($) {
   });
 
   $(".nav-2").click(function() {
-    $('html,body').animate({scrollTop: $(".services").offset().top + -51},'slow');
+    $('html,body').animate({scrollTop: $(".services").offset().top + -60},'slow');
   });
   
   $(".nav-3").click(function() {
-    $('html,body').animate({scrollTop: $(".locations").offset().top + -51},'slow');
+    $('html,body').animate({scrollTop: $(".locations").offset().top + -60},'slow');
   });
   
   $(".nav-4").click(function() {
-    $('html,body').animate({scrollTop: $(".priceCalculator").offset().top + -51},'slow');
+    $('html,body').animate({scrollTop: $(".priceCalculator").offset().top + -60},'slow');
   });
   
   $(".nav-5").click(function() {
-    $('html,body').animate({scrollTop: $(".aboutImage").offset().top + -51},'slow');
+    $('html,body').animate({scrollTop: $(".aboutImage").offset().top + -60},'slow');
   });
   
   $(".nav-6, .schedule").click(function() {
-    $('html,body').animate({scrollTop: $(".contact").offset().top + -51},'slow');
+    $('html,body').animate({scrollTop: $(".contact").offset().top + -60},'slow');
   });
   
   // Mobile Smooth Scrolling Navigation
