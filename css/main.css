@@ -70,7 +70,7 @@ img {
 }
 /* Scroll To Top Button */
 .scroll {
-  display:none;
+  display: none;
   width: 50px;
   height: 50px;
   background: #2ABE0B;
@@ -79,8 +79,8 @@ img {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 2em;
-  right: 2em;
+  bottom: 40px;
+  right: 40px;
   cursor: pointer;
   z-index: 30;
   -moz-animation-duration: .5s;
@@ -90,11 +90,11 @@ img {
   animation-duration: .5s;
 }
 .scroll:before {
-  font-family: 'Font Awesome';
+  font-family: 'FontAwesome';
   content: "\f062";
   font-weight: 100;
-  color: #212633;
-  font-size: 1.5em;
+  color: #fff;
+  font-size: 22px;
 }
 /* Business Information */
 .businessInformation {
@@ -889,6 +889,10 @@ img {
   /* Global Settings */
   h2.sectionTitleOne {
     font-size: 42px;
+  }
+  /* Scroll To Top Button */
+  .scroll {
+    display: none;
   }
   /* Banner */
   .banner h1 {
