@@ -235,4 +235,11 @@ jQuery(function($) {
     $('html,body').animate({scrollTop: $(".contact").offset().top + -51},'slow');
   });
   
+  // Mobile Smooth Scrolling Navigation
+  $(".mobileMenu li a").on("click", function(){
+    $('.mobileMenu, .mobileNavigation').removeClass('slide');
+    $('.hamburger span').removeClass('fade');
+    $('.hamburger').removeClass('rotate');
+  });
+  
 });
