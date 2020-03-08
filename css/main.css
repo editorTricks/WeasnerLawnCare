@@ -180,6 +180,19 @@ img {
   font-size: 13px;
   padding: 0 20px;
   box-sizing: border-box;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.logoNavigation li a:hover {
+  color: #2abe0b;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 /* Banner */
 .banner {
@@ -257,6 +270,20 @@ img {
   box-sizing: border-box;
   display: inline-block;
   border-radius: 25px;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.services a:hover {
+  background: #2abe0b;
+  color: #fff;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 .services .container {
   display: flex;
@@ -625,6 +652,20 @@ img {
   background: -ms-linear-gradient(90deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* ie10+ */
   background: linear-gradient(0deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ABE0B', endColorstr='#2A960B',GradientType=0 ); /* ie6-9 */
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.button:hover {
+  background: transparent;
+  border: 1px solid ##2abe0b;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 /* Contact Form */
 .form-elements {

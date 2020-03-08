@@ -231,7 +231,7 @@ jQuery(function($) {
     $('html,body').animate({scrollTop: $(".aboutImage").offset().top + -51},'slow');
   });
   
-  $(".nav-6").click(function() {
+  $(".nav-6, .schedule").click(function() {
     $('html,body').animate({scrollTop: $(".contact").offset().top + -51},'slow');
   });
   
