@@ -242,4 +242,9 @@ jQuery(function($) {
     $('.hamburger').removeClass('rotate');
   });
   
+  // Sticky Header
+  if (scroll >= 34) {
+    $(".header").addClass("stick");
+  }
+  
 });

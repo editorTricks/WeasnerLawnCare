@@ -152,6 +152,9 @@ img {
 .header.show {
   display: block;
 }
+.header.stick {
+  position: fixed;
+}
 .header .container {
   padding: 40px 20px;
   box-sizing: border-box;
