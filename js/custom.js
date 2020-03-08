@@ -195,16 +195,16 @@ jQuery(function($) {
       var scroll = $(window).scrollTop();
 
       if (scroll >= 1) {
-        $(".scroll").removeClass("animated zoomOut");
-        $(".scroll").css('display', 'flex');
-        $(".scroll").addClass("animated zoomIn");
+        $(".scrollButton").removeClass("animated zoomOut");
+        $(".scrollButton").css('display', 'flex');
+        $(".scrollButton").addClass("animated zoomIn");
       } else {
-        $(".scroll").removeClass("animated zoomIn");
-        $(".scroll").addClass("animated zoomOut");
+        $(".scrollButton").removeClass("animated zoomIn");
+        $(".scrollButton").addClass("animated zoomOut");
       }
     });
 
-    $(".scroll").click(function() {
+    $(".scrollButton").click(function() {
       $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;
     });

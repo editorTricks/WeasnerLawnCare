@@ -69,7 +69,7 @@ img {
   margin: 0 auto;
 }
 /* Scroll To Top Button */
-.scroll {
+.scrollButton {
   display: none;
   width: 50px;
   height: 50px;
@@ -89,7 +89,7 @@ img {
   -o-animation-duration: .5s;
   animation-duration: .5s;
 }
-.scroll:before {
+.scrollButton:before {
   font-family: 'FontAwesome';
   content: "\f062";
   font-weight: 100;
