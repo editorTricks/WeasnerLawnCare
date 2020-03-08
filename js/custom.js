@@ -210,4 +210,29 @@ jQuery(function($) {
     });
   }
   
+  // Smooth Scrolling Navigation
+  $(".nav-1").click(function() {
+    $('html, body').animate({scrollTop: 0 },'slow');
+  });
+
+  $(".nav-2").click(function() {
+    $('html,body').animate({scrollTop: $(".services").offset().top + -51},'slow');
+  });
+  
+  $(".nav-3").click(function() {
+    $('html,body').animate({scrollTop: $(".locations").offset().top + -51},'slow');
+  });
+  
+  $(".nav-4").click(function() {
+    $('html,body').animate({scrollTop: $(".priceCalculator").offset().top + -51},'slow');
+  });
+  
+  $(".nav-5").click(function() {
+    $('html,body').animate({scrollTop: $(".aboutImage").offset().top + -51},'slow');
+  });
+  
+  $(".nav-6").click(function() {
+    $('html,body').animate({scrollTop: $(".contact").offset().top + -51},'slow');
+  });
+  
 });
