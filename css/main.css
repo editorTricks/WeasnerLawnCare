@@ -217,11 +217,7 @@ img {
 .mobileNavigation {
   display: none;
 }
-.logoNavigation li {
-  list-style: none;
-  display: inline-block;
-}
-.logoNavigation li a {
+.logoNavigation .desktopNav {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
@@ -233,8 +229,9 @@ img {
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
+  cursor: pointer;
 }
-.logoNavigation li a:hover {
+.logoNavigation .desktopNav:hover {
   color: #2abe0b;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;

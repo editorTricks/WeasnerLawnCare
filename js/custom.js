@@ -211,7 +211,7 @@ jQuery(function($) {
   }
   
   // Smooth Scrolling Navigation
-  $(".nav-1").click(function() {
+  $(".nav-1, .logo").click(function() {
     $('html, body').animate({scrollTop: 0 },'slow');
   });
 
