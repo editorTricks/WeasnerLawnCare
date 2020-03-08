@@ -4,12 +4,6 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
   padding: 0;
   border:0;
 }
-input,
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;	
-}
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }
@@ -836,6 +830,7 @@ img {
   }
   .locationRight {
     border-top-right-radius: 0;
+	border-bottom-left-radius: 10px;
   }
   .locationRight .container {
     text-align: center;
