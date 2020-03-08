@@ -121,6 +121,12 @@ img {
   padding: 0 20px;
   box-sizing: border-box;
 }
+.businessInformation a {
+  color: #fff;
+}
+.businessInformation a:hover {
+  text-decoration: underline;
+}
 .number:before {
   content: "\f095";
   font-family: "FontAwesome";
