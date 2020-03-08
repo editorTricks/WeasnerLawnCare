@@ -943,6 +943,9 @@ img {
   .services .container {
     flex-wrap: wrap;
   }
+  .services a {
+    font-size: 13px;
+  }
   /* Locations */
   .locationLeft, .locationRight {
     padding: 20px;
