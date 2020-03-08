@@ -146,7 +146,7 @@ img {
 }
 /* Banner */
 .banner {
-  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/lawn_field.jpg);
+  background: url(images/lawn_field.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
