@@ -1,0 +1,192 @@
+jQuery(function($) {
+
+  // Header Animation
+  $(".header").addClass("show animated slideInDown");
+  
+  // Banner Animation
+  $(".banner .container").addClass("show animated fadeIn");
+  
+  // Price Calculator
+  $(".calculatorButton").on("click", function(){
+	  
+	// Clear Input Value When Button is Clicked  
+	$('.calculatorInput').val('');
+	
+	// Apply Green Color to Buttons Accordingly
+    if ($(this).hasClass("green")) {
+      $(this).removeClass("green");
+	} 
+	else if (!$(this).hasClass("green")) {
+	  $(this).parent().find(".calculatorButton").removeClass("green");
+	  $(this).addClass("green");
+	}
+  });
+  
+  // Tip
+  $(".tip").on("click", function(){
+    if ($(".squareFeetCalculate").hasClass("green")) {
+      $(".squareFeetCalculate").removeClass("green");
+	  $(".acreCalculate").addClass("green");
+	  $('.calculatorInput').val('');
+	  $('.calculatorInput').attr('placeholder','2.6 acres');
+	  $(this).empty();
+    }
+	else if ($(".acreCalculate").hasClass("green")) {
+      $(".acreCalculate").removeClass("green");
+	  $(".squareFeetCalculate").addClass("green");
+	  $('.calculatorInput').val('');
+	  $('.calculatorInput').attr('placeholder','23,750 square feet'); 
+	  $(this).empty();
+    }
+  });
+  
+  // Change Placeholder
+  $(".squareFeetCalculate").on("click", function() {
+    $('.calculatorInput').attr('placeholder','23,750 square feet'); 
+  });
+  
+  $(".acreCalculate").on("click", function() {
+    $('.calculatorInput').attr('placeholder','2.6 acres'); 
+  });
+  
+  // Mowing & Square Feet Buttons
+  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
+	
+  function calculate() {
+	  
+	// Input Box Value
+	var inputValue = $(".calculatorInput").val();
+	
+	// Remove Results
+	$(".results, .disclaimer, .tip").empty();
+	
+	// Remove Tip Animation
+	$(".tip").append(tip).removeClass("animated shake");
+	  
+	// Mowing + Square Feet  
+    if ($('.mowingCalculate').hasClass('green') && $('.squareFeetCalculate').hasClass('green')) {
+		
+	  var tip = "Your yard is equal to or bigger than 1 acre. Use " + "<div class='acreTip'>" + "'Acre'" + "</div>" + " instead of 'Square Feet' for an accurate estimate.";
+
+	  if ((inputValue > 0) && (inputValue <= 5000)) {
+        $(".results").append("$25*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 5000) && (inputValue <= 10000)) {
+        $(".results").append("$30*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 10000) && (inputValue <= 20000)) {
+        $(".results").append("$35*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 20000) && (inputValue <= 30000)) {
+        $(".results").append("$40*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 30000) && (inputValue <= 40000)) {
+        $(".results").append("$45*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 40000) && (inputValue <= 43560)) {
+        $(".results").append("$50*");
+	    $(".disclaimer").append(disclaimer);
+	  }
+	  else if (inputValue > 43560) {
+        $(".tip").append(tip).addClass("animated shake");
+      }
+    }
+	
+	// Mowing + Acre
+	if ($('.mowingCalculate').hasClass('green') && $('.acreCalculate').hasClass('green')) {
+	
+      var tip = "Your yard is less than 1 acre. Use " + "<div class='squareFeetTip'>" + "'Square Feet'" + "</div>" + " instead of 'Acre'.";
+		
+      if ((inputValue > 0) && (inputValue < 1)) {
+        $(".tip").append(tip).addClass("animated shake");
+      }
+	  else if ((inputValue >= 1) && (inputValue <= 2)) {
+        var acreCost60 = 60*inputValue;
+        $(".results").append("$" + acreCost60 + "*");
+		$(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue >= 2.0) && (inputValue <= 3)) {
+        var acreCost55 = 55*inputValue;
+        $(".results").append("$" + acreCost55 + "*");
+		$(".disclaimer").append(disclaimer);
+      }
+	  else if (inputValue > 3) {
+        var acreCost50 = 50*inputValue;
+		var acreCost50Comma = acreCost50.toLocaleString();
+        $(".results").append("$" + acreCost50Comma + "*");
+		$(".disclaimer").append(disclaimer);
+      }
+    }
+	
+	// Leaf + Square Feet
+	if ($('.leafCalculate').hasClass('green') && $('.squareFeetCalculate').hasClass('green')) {
+		
+	  var tip = "Your yard is equal to or bigger than 1 acre. Use " + "<div class='acreTip'>" + "'Acre'" + "</div>" + " instead of 'Square Feet' for an accurate estimate.";
+      
+	  if ((inputValue > 0) && (inputValue <= 43560)) {
+	    var acreDivide = inputValue/43560;
+		var leafSqaureFeetCost = Math.trunc(acreDivide*307.6923076923077);
+		$(".results").append("$" + leafSqaureFeetCost + "*");
+		$(".disclaimer").append(disclaimer);
+	  }
+	  else if (inputValue > 43560) {
+        $(".tip").append(tip).addClass("animated shake");
+      }
+	  
+    }
+	
+	// Leaf + Acre
+	if ($('.leafCalculate').hasClass('green') && $('.acreCalculate').hasClass('green')) {
+		
+      var tip = "Your yard is less than 1 acre. Use " + "<div class='squareFeetTip'>" + "'Square Feet'" + "</div>" + " instead of 'Acre'.";
+      
+	  if ((inputValue > 0) && (inputValue < 1)) {
+        $(".tip").append(tip).addClass("animated shake");
+      }
+	  else if (inputValue >= 1) {
+		var leafAcreCost = Math.trunc(inputValue*307.6923076923077);
+		var leafAcreCostComma = leafAcreCost.toLocaleString();
+		$(".results").append("$" + leafAcreCostComma + "*");
+		$(".disclaimer").append(disclaimer);
+      }
+	  
+    }
+  }
+  
+  // Calculate When a Button is Clicked
+  $(".calculatorButton").on("click", function(){
+    calculate();
+  });
+  
+  // Calculate When a Number is Added
+  $(".calculatorInput").on("keyup", function() {
+    calculate();
+  });
+  
+  calculate();
+  
+  // Mobile Navigation
+  $('.hamburger').on('click', function(){
+    $('.mobileMenu, .mobileNavigation').toggleClass('slide');
+    $('.hamburger span').toggleClass('fade');
+    $('.hamburger').toggleClass('rotate');
+  });
+  
+  // Mobile Header Scroll Animation
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 1) {
+      $(".mobileHeader").addClass("scroll");
+    }
+	else {
+      $(".mobileHeader").removeClass("scroll");
+    }
+  });
+  
+});

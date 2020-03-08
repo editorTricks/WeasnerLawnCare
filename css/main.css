@@ -7,3 +7,867 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: 'Edo';
+  src: url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.eot');
+  src: url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.eot?#iefix') format('embedded-opentype'),
+       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.woff2') format('woff2'),
+       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.woff') format('woff'),
+       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.ttf') format('truetype'),
+       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.svg#Edo') format('svg');
+}
+/* Global Settings */
+body {
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  font-family: "Montserrat";
+}
+h2.sectionTitleOne {
+  font-family: "Edo";
+  text-align: center;
+  font-size: 60px;
+  font-weight: 100;
+}
+h2.sectionTitle {
+  font-family: "Montserrat";
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 24px;
+  font-family: "Roboto";
+  margin-bottom: 20px;
+}
+a {
+  color: #2ABE0B;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+/* Business Information */
+.businessInformation {
+  position: relative;
+  z-index: 3;
+  color: #f1f1f2;
+  background: #000;
+}
+.businessInformation .container {
+  max-width: 600px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 300;
+  z-index: 2;
+  font-size: 11px;
+  text-shadow: 0 0 10px #000;
+}
+.businessInformation .container > * {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.number:before {
+  content: "\f095";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  font-weight: initial;
+}
+.email:before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  font-weight: initial;
+}
+.hours:before {
+  content: "\f017";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  font-weight: initial;
+}
+/* Header */
+.header {
+  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+.header.show {
+  display: block;
+}
+.header .container {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  max-width: 950px;
+}
+.logoNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoNavigation img {
+  max-height: 75px;
+}
+/* Navigation */
+.mobileNavigation {
+  display: none;
+}
+.logoNavigation li {
+  list-style: none;
+  display: inline-block;
+}
+.logoNavigation li a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+/* Banner */
+.banner {
+  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/lawn_field.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+.banner:before {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  z-index: 1;
+}
+.banner:after{
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .4), transparent);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, .4), transparent);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, .4), transparent);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .4), transparent);
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, .4), transparent);
+  z-index: 1;
+}
+.banner .container {
+  display: none;
+  max-width: 1000px;
+  padding: 198.98px 20px 140px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  height: 70vh;
+}
+.banner .container.show {
+  display: flex;
+}
+.banner h1 {
+  font-size: 78px;
+  font-weight: 500;
+  font-family: "Edo";
+}
+.banner p {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "Montserrat";
+}
+/* Services */
+.services {
+  position: relative;
+  z-index: 1;
+}
+.services a {
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 1px solid #2abe0b;
+  padding: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 25px;
+}
+.services .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px 80px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  position: relative;
+  margin-top: -100px;
+}
+.mowing,
+.leafCleanUp {
+  text-align: center;
+}
+.services img {
+  object-fit: cover;
+  max-height: 350px;
+  border-radius: 50%;
+}
+.description {
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* Service Area */
+.locations {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.locations > .container {
+  display: flex;
+  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/wlc_map.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  max-width: 1080px;
+  -webkit-box-shadow: 0 0 20px #000;
+  box-shadow: 0 0 20px #000;
+  border-radius: 10px;
+}
+.locationLeft,
+.locationRight {
+  width: 50%;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+.locationMiddle {
+  width: 150px;
+  background: rgba(42, 190, 11, 0.5);
+  -webkit-clip-path: polygon(100% 0,0% 100%,100% 100%);
+  clip-path: polygon(100% 0,0% 100%,100% 100%);
+}
+.locationRight {
+  background: rgba(42, 190, 11, 0.5);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.locationRight .container {
+  position: relative;
+}
+.locationLeft {
+  color: #fff;
+  text-align: right;
+  text-shadow: 0 0 20px #000;
+  display: flex;
+  align-items: center;
+}
+.locationLeft > .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.locationLeft > .container:before {
+  content: "\f041";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  font-weight: initial;
+  font-size: 212px;
+  color: #2abe0b;
+  position: absolute;
+  left: -65px;
+}
+.locationLeftH2One {
+  font-size: 120px;
+  line-height: 120px;
+  font-family: "Edo";
+  font-weight: initial;
+}
+.locationLeftH2Two {
+  font-size: 52px;
+  font-weight: 900;
+}
+.locationLeft p {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.state {
+  font-weight: 900;
+  font-size: 32px;
+}
+.township {
+  margin-top: 2px;
+}
+.pennsylvania {
+  margin-top: 10px;
+}
+.township {
+  font-family: "Roboto";
+}
+/* Price Calculator */
+.priceCalculator .container {
+  max-width: 1000px;
+  padding: 80px 20px 140px;
+  box-sizing: border-box;
+}
+.selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.selection:last-child {
+  margin-bottom: 0;
+}
+.priceCalculator p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.priceCalculatorInput {
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Roboto";
+  width: 100%;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+}
+::placeholder {
+  color: #ddd;
+}
+.calculator {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.calculatorButton {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #2abe0b;
+  border-radius: 25px;
+  color: #2abe0b;
+  font-family: "Roboto";
+  cursor: pointer;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.calculatorButton.green {
+  background: #2abe0b;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.calculatorButton:hover {
+  background: #2abe0b;
+  color: #fff;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.mowingCalculate,
+.squareFeetCalculate {
+  margin-right: 5px;
+}
+.leafCalculate,
+.acreCalculate {
+  margin-left: 5px;
+}
+.select {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 900;
+  color: #777;
+}
+.calculatorInput {
+  max-width: 200px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+  border-radius: 25px;
+}
+.calculatorInput:focus {
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.note {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #ddd;
+  font-size: 11px;
+  font-weight: 400;
+}
+.results {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 70px;
+  font-weight: 900;
+  color: #2abe0b;
+  flex-basis: 100%;
+}
+.disclaimer {
+  font-style: italic;
+  color: #999;
+  font-size: 10px;
+  max-width: 400px;
+  margin: 10px auto 0;
+}
+.tip {
+  font-weight: 300;
+  font-size: 34px;
+  text-align: center;
+}
+.acreTip,
+.squareFeetTip {
+  display: inline-block;
+  cursor: pointer;
+  color: #2abe0b;
+}
+.acreTip:hover,
+.squareFeetTip:hover  {
+  text-decoration: underline;
+}
+/* About */
+.about {
+  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/lawn_2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+.about:before {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  z-index: 1;
+}
+.about .container {
+  padding: 80px 20px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+}
+.about img {
+  border: 20px solid #fff;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: -179px auto 0;
+}
+/* Contact */
+.contact p {
+  text-align: center;
+}
+.contact .container {
+  padding: 80px 20px;
+  max-width: 700px;
+  box-sizing: border-box;
+}
+/* Footer */
+.footer .container {
+  max-width: 600px;
+  padding: 40px 20px 10px;
+  box-sizing: border-box;
+}
+.footerLogo {
+  text-align: center;
+}
+.footer p {
+  font-size: 12px;
+  margin-bottom: 40px;
+  line-height: 20px;
+  text-align: center;
+}
+.footerLogo img {
+  max-height: 110px;
+}
+.payments {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 20px;
+}
+.paymentLogo {
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.payments img {
+  max-height: 20px;
+}
+.copyright {
+  text-align: center;
+  font-size: 11px;
+}
+/* Buttons */
+.button {
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 0px auto;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: -moz-linear-gradient(90deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(42,190,11,1)), color-stop(100%, rgba(42,150,11,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(42,150,11,1) 0%, rgba(42,190,11,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ABE0B', endColorstr='#2A960B',GradientType=0 ); /* ie6-9 */
+}
+/* Contact Form */
+.pure-form {
+  display: flex;
+  flex-direction: column;
+}
+.pure-form > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.pure-form input,
+.pure-form textarea {
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto";
+}
+.pure-form button {
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 1px solid #2abe0b;
+  padding: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 25px;
+  background: transparent;
+  color: #2abe0b;
+}
+@media screen and (max-width: 1200px) {
+  .locationLeft, .locationRight {
+    padding: 40px;
+  }
+  .locationLeftH2One {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .locationLeft > .container:before {
+    font-size: 100px;
+    left: -5px;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 992px) {
+  /* Business Information */
+  .businessInformation {
+    display: none;
+  }
+  /* Header */
+  .header,
+  .header.show  {
+    display: none;
+  }
+  .mobileLogo img {
+    max-height: 40px;
+  }
+  .phoneIcon {
+    display: block;
+  }
+  .phoneIcon:after {
+    content: "\f095";
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    position: relative;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  /* Navigation */
+  .mobileNavigation {
+    display: block;
+  }
+  .mobileNavigation.slide {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .mobileHeader {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    width: 100%;
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .mobileHeader.scroll {
+    background: rgba(0,0,0,0.95);
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .mobileHeader .container {
+    padding: 10px 20px;
+	box-sizing: border-box;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+  }
+  .hamburger {
+    cursor: pointer;
+  }
+  .hamburger:before, 
+  .hamburger:after {
+    content: '';
+	position:relative;
+    top:0px;
+  }
+  .hamburger span {
+    margin: 6px 0;
+  }
+  .hamburger span,
+  .hamburger:before,
+  .hamburger:after {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background: #ffffff;
+  }
+  .hamburger span,
+  .hamburger:before,
+  .hamburger:after,
+  .hamburger span.fade,
+  .hamburger.rotate:before,
+  .hamburger.rotate:after {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .hamburger span.fade {
+    background:transparent;
+  }
+  .hamburger.rotate:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 6px;
+  }
+  .hamburger.rotate:after {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: -8px;
+  }
+  .mobileMenu {
+    display: block;
+	position: fixed;
+	top: 55px;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 23;
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .mobileMenu.slide {
+    left: 0;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .mobileMenu  li{
+    list-style: none;
+  }
+  .mobileMenu li a {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+  }
+  /* Banner */
+  .banner .container {
+    padding: 63.98px 20px 140px;
+    height: 60vh;
+  }
+  .banner h1 {
+    font-size: 60px;
+  }
+  .banner p {
+    font-size: 26px;
+  }
+  /* Services */
+  .services img {
+    max-height: 250px;
+  }
+  /* Locations */
+  .locations > .container {
+    flex-wrap: wrap;
+  }
+  .locationLeft,
+  .locationRight {
+    width: 100%;
+  }
+  .locationLeft {
+    text-align: center;
+  }
+  .locationLeft > .container:before {
+    position: relative;
+    left: 0;
+  }
+  .locationMiddle {
+    height: 20px;
+	width: 100%;
+  }
+  .locationRight {
+    border-top-right-radius: 0;
+  }
+  .locationRight .container {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px){
+  /* Global Settings */
+  h2.sectionTitleOne {
+    font-size: 42px;
+  }
+  /* Banner */
+  .banner .container {
+    height: 50vh;
+  }
+  .banner h1 {
+    font-size: 38px;
+  }
+  .banner p {
+    font-size: 18px;
+  }
+  /* Services */
+  .services .container {
+    flex-wrap: wrap;
+  }
+  /* Locations */
+  .locationLeft, .locationRight {
+    padding: 20px;
+  }
+  .locationLeftH2One {
+    font-size: 65px;
+    line-height: 65px;
+  }
+  .locationLeftH2Two {
+    font-size: 30px;
+  }
+  /* About */
+  .about img {
+    height: 250px;
+    width: 250px;
+  }
+}

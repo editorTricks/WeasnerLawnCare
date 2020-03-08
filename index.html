@@ -5,45 +5,212 @@
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
     <meta name='viewport'content='width=device-width, initial-scale=1.0' />
     <link rel='stylesheet' href='css/main.css' />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body class='header-page-layout'>
   
+    <div class="businessInformation">
+	  <div class="container">
+	    <div class="number">1-609-323-5233</div>
+		<div class="email">weasnerlawncare@gmail.com</div>
+		<div class="hours">Mon-Fri 8am-4pm</div>
+	  </div>
+	</div>
+  
     <div class="header">
 	  <div class='container'>
-	    <div class='logo'>
-		  <a href='/WeasnerLawnCare'><img src='images/wlc_logo_color.png' /></a></div>
-		  <div class='navigation'>
-			<ul>
-			  <li><a href='/WeasnerLawnCare'>Home</a></li>
-			  <li><a href='/WeasnerLawnCare/about.html'>About</a></li>
-			  <li><a href='/WeasnerLawnCare/contact.html'>Contact</a></li>
-			</ul>
-		  </div>
-	    </div>
+	    <div class='logoNavigation'>
+		  <li><a href='/WeasnerLawnCare'>Home</a></li>
+	      <li><a href='/WeasnerLawnCare/about.html'>Services</a></li>
+		  <li><a href='/WeasnerLawnCare/about.html'>Locations</a></li>
+		  <a href='/WeasnerLawnCare'><img src='images/wlc_logo_white.png' /></a>
+		  <li><a href='/WeasnerLawnCare/contact.html'>Pricing</a></li>
+		  <li><a href='/WeasnerLawnCare/contact.html'>About</a></li>
+          <li><a href='/WeasnerLawnCare/contact.html'>Contact</a></li>
+        </div>
       </div>
+	</div>
+	
+	<div class="mobileNavigation">
+	  <div class="mobileHeader">
+	    <div class="container">
+	      <div class="hamburger">
+	        <span></span>
+	      </div>
+		  <div class="mobileLogo">
+		    <img src='images/wlc_logo_white.png' />
+		  </div>
+		  <a href="tel:+1-609-323-5233" class="phoneIcon"></a>
+	    </div>
+	  </div>
+	
+	  <div class="mobileMenu">
+	    <div class="container">
+	      <li><a href='/WeasnerLawnCare'>Home</a></li>
+	      <li><a href='/WeasnerLawnCare/about.html'>Services</a></li>
+		  <li><a href='/WeasnerLawnCare/about.html'>Locations</a></li>
+		  <li><a href='/WeasnerLawnCare/contact.html'>Pricing</a></li>
+		  <li><a href='/WeasnerLawnCare/contact.html'>About</a></li>
+          <li><a href='/WeasnerLawnCare/contact.html'>Contact</a></li>
+	    </div>
+	  </div>
 	</div>
 
 	<div class="banner">
 	  <div class="container">
-
+        <h1>Professional Lawn Care</h1>
+		<p>Let Us Take Care of Your Lawn</p>
+		<div class="button">Schedule Service</div>
 	  </div>
 	</div>
 	
-	<div class="main">
+	<div class="services">
 	  <div class="container">
+        <div class="mowing">
+		  <img src='images/titan_hd_1500_400.png' />
+	      <div class="description">
+		    <h2 class="sectionTitle">Mowing</h2>
+		    <p>Our signature mowing service includes grass cutting, weed whacking, and a clean up of debris from driveways, sidewalks, patios, stairs, etc.</p>
+			<a href="#">Schedule Mowing</a>
+		  </div>
+		</div>
+		<div class="leafCleanUp">
+		  <img src='images/echo_pb8010hh_400.png' />
+		  <div class="description">
+		    <h2 class="sectionTitle">Leaf Clean Up</h2>
+		    <p>Our leaf clean up service removes all leaves from the property and relocates them to the street for local municapal pick up.</p>
+			<a href="#">Schedule Leaf Clean Up</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="locations">
+	  <div class="container">
+	    <div class="locationLeft">
+	      <div class="container">
+		    <h2 class="locationLeftH2Two">Service</h2>
+		    <h2 class="locationLeftH2One">Areas</h2>
+		  </div>
+	    </div>
+	    <div class="locationMiddle"></div>
+	    <div class="locationRight">
+	      <div class="container">
+		    <div class="state">New Jersey</div>
+		    <div class="township">Ewing</div>
+			<div class="township">Titusville</div>
+		    <div class="state pennsylvania">Pennsylvania</div>
+			<div class="township">Morrisville</div>
+		    <div class="township">Newtown</div>
+		    <div class="township">Yardley</div>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="priceCalculator">
+	  <div class="container">
+	    <h2 class="sectionTitleOne">Price Calculator</h2>
+		<p>Use the calculator below to estimate the cost of our services for your home</p>
+		<div class="selection">
+		  <div class="select">Select Service</div>
+		  <div class="calculatorButton mowingCalculate green">Mowing</div>
+		  <div class="calculatorButton leafCalculate">Leaf Clean Up</div>
+		</div>
+		<div class="selection">
+		  <div class="select">Select Lot Size Unit</div>
+		  <div class="calculatorButton squareFeetCalculate green">Square Feet</div>
+		  <div class="calculatorButton acreCalculate">Acre</div>
+		</div>
+		<div class="selection">
+		  <div class="select">Input Lot Size</div>
+		  <input type="number" placeholder="21,570 square feet" class="calculatorInput" />
+		  <div class="note">Note: There are 43,560 square feet in 1 acre</div>
+		</div>
+		<div class="results"></div>
+		<div class="disclaimer"></div>
+		<div class="tip"></div>
+	  </div>
+	</div>
+	
+	<div class="about">
+	  <div class="container">
+	    <img class="aboutImage" src='images/jeep_trailer.jpg' />
+		<h2 class="sectionTitleOne">Who We Are.</h2>
+		<p>Part of who we are is what we know, and what we know is how to not only give your lawn that special treatment, but as well as our client. Surely our goal is to leave you 100% satisfied with our work, but nothing beats the feeling in knowing we gave more than what you expected.</p>
+	  </div>
+	</div>
+	
+	<div class="contact">
+	  <div class="container">
+		
+	    <h2 class="sectionTitleOne">Get in Touch</h2>
+		<p>Feel free to drop us a line below!</p>
+		
+		<form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com" action="https://script.google.com/macros/s/AKfycbwJ2rdjEIgiXRFrOmo487aXmgqtCWDLR4FAxr1g/exec">
+  
+          <input id="name" name="name" placeholder="Name" />
+			
+	      <input id="email" name="email" type="email" value="" required placeholder="Your email" />
 
+          <textarea id="message" name="message" rows="10" placeholder="How can we help you?"></textarea>
+
+          <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send
+          </button>
+		  
+        </form>
+	
+		<!-- Customise the Thankyou Message People See when they submit the form: -->
+		<div style="display:none;" id="thankyou_message">
+          <h2>
+            <em>Thanks</em> for contacting us!
+            We will get back to you soon!
+          </h2>
+        </div>
+		  
 	  </div>
 	</div>
 	
 	<div class="footer">
 	  <div class="container">
-
+		<div class="footerLogo">
+	      <img src='images/wlc_logo_color.png' />
+	    </div>
+	    <p>Weasner Lawn Care is a lawn service company based out of the eastern Pennsylvania and <br> central New Jersey region, servicing clients on both sides of the Delaware River.</p>
+		<p>For lawn care service inquiries, please feel free to use the <br> form above or call us directly at <a href="tel:+1-609-323-5233">1 (609) 323-5233</a>.
+	    <div class="payments">
+		  <div class="paymentLogo">
+		    <img src='images/visa.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/mastercard_logo.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/american_express_logo_2.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/discover_logo.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/google_pay_logo_2.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/apple_pay_logo.png' />
+		  </div>
+		  <div class="paymentLogo">
+		    <img src='images/paypal_logo_1.png' />
+		  </div>
+		</div>
+	    <p class="copyright">©2020 Weasner Lawn Care, All Rights Reserved</p>
 	  </div>
-	</div>
+	</div>	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 	
   </body>
 </html>
