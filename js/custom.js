@@ -247,8 +247,11 @@ jQuery(function($) {
     var scroll = $(window).scrollTop();
 	
     if (scroll >= 34) {
-      $(".header").addClass("stick");
+      $(".header, .header .container, .logoNavigation img").addClass("stick");
     }
+	else {
+      $(".header, .header .container, .logoNavigation img").removeClass("stick");
+	}
   });
   
 });
