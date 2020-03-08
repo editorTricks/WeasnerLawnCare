@@ -876,9 +876,22 @@ img {
   .locationLeftH2Two {
     font-size: 30px;
   }
+  /* Price Calculator */
+  .calculatorInput {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	border: 1px solid #ddd;
+  }
   /* About */
   .about img {
     height: 250px;
     width: 250px;
+  }
+  /* Contact */
+  .pure-form input,
+  .pure-form textarea {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	border: 1px solid #ddd;
   }
 }
