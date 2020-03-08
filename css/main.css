@@ -19,12 +19,12 @@ input[type=number]::-webkit-outer-spin-button {
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @font-face {
   font-family: 'Edo';
-  src: url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.eot');
-  src: url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.eot?#iefix') format('embedded-opentype'),
-       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.woff2') format('woff2'),
-       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.woff') format('woff'),
-       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.ttf') format('truetype'),
-       url('file:///C:/Users/Chris/websites/weasner_lawn_care/fonts/Edo.svg#Edo') format('svg');
+  src: url('../../fonts/Edo.eot');
+  src: url('../../fonts/Edo.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Edo.woff2') format('woff2'),
+       url('../../fonts/Edo.woff') format('woff'),
+       url('../../fonts/Edo.ttf') format('truetype'),
+       url('../../fonts/Edo.svg#Edo') format('svg');
 }
 /* Global Settings */
 body {
@@ -251,7 +251,7 @@ img {
 }
 .locations > .container {
   display: flex;
-  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/wlc_map.jpg);
+  background: url(../../images/wlc_map.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -488,7 +488,7 @@ img {
 }
 /* About */
 .about {
-  background: url(file:///C:/Users/Chris/websites/weasner_lawn_care/images/lawn_2.jpg);
+  background: url(../../images/lawn_2.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
