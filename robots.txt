@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://weasnerlawncare.com/sitemap.xml
