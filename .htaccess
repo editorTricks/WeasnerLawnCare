@@ -1,5 +1,3 @@
-<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.weasnerlawncare.com$
-RewriteRule (.*) https://weasnerlawncare.com/$1 [R=301,L]
-</IfModule>
+RewriteCond %{HTTP_HOST} ^www.yourdomain.com [NC]
+RewriteRule ^(.*)$ https://weasnerlawncare.com/$1 [L,R=301]
