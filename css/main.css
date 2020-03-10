@@ -645,6 +645,9 @@ img {
   max-width: 700px;
   box-sizing: border-box;
 }
+.thankyou_message {
+  display: none;
+}
 /* Footer */
 .footer .container {
   max-width: 600px;
