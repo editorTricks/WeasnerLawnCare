@@ -644,7 +644,7 @@ img {
   box-sizing: border-box;
 }
 .contact h2.sectionTitle {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 h2.sectionTitleOne {
   line-height: 60px;
