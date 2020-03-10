@@ -684,7 +684,7 @@ img {
 }
 /* Facebook Plugin */
 .fb_iframe_widget {
-  display: flex;
+  display: flex!important;
   justify-content: center;
   margin-bottom: 40px;
 }
