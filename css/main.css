@@ -682,6 +682,12 @@ img {
   text-align: center;
   font-size: 11px;
 }
+/* Facebook Plugin */
+.fb_iframe_widget {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 /* Buttons */
 .button {
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
