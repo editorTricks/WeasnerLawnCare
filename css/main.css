@@ -340,10 +340,13 @@ img {
   max-width: 1000px;
   position: relative;
   margin-top: -100px;
+  flex-wrap: wrap;
 }
 .mowing,
-.leafCleanUp {
+.leafCleanUp,
+.treePruning {
   text-align: center;
+  flex-basis: 480px;
 }
 .services img {
   object-fit: cover;
