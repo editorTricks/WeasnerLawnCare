@@ -996,6 +996,9 @@ h2.sectionTitleOne {
 }
 @media screen and (max-width: 767px){
   /* Global Settings */
+  br {
+    display: none;
+  }
   h2.sectionTitleOne {
     font-size: 42px;
   }
