@@ -130,7 +130,7 @@ jQuery(function($) {
       
 	  if ((inputValue > 0) && (inputValue <= 43560)) {
 	    var acreDivide = inputValue/43560;
-		var leafSqaureFeetCost = Math.trunc(acreDivide*307.6923076923077);
+		var leafSqaureFeetCost = Math.trunc(acreDivide*461.538461538);
 		$(".results").append("$" + leafSqaureFeetCost + "*");
 		$(".disclaimer").append(disclaimer);
 	  }
@@ -149,7 +149,7 @@ jQuery(function($) {
         $(".tip").append(tip).addClass("animated shake");
       }
 	  else if (inputValue >= 1) {
-		var leafAcreCost = Math.trunc(inputValue*307.6923076923077);
+		var leafAcreCost = Math.trunc(inputValue*461.538461538);
 		var leafAcreCostComma = leafAcreCost.toLocaleString();
 		$(".results").append("$" + leafAcreCostComma + "*");
 		$(".disclaimer").append(disclaimer);
