@@ -344,7 +344,8 @@ img {
 }
 .mowing,
 .leafCleanUp,
-.treePruning {
+.treePruning,
+.treeRemoval {
   text-align: center;
   flex-basis: 480px;
 }
