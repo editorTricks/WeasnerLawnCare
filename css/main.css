@@ -799,11 +799,29 @@ h2.sectionTitleOne {
   .mobileLogo img {
     max-height: 40px;
   }
-  .phoneIcon {
+  .phoneIcon,
+  .textIcon  {
     display: block;
   }
   .phoneIcon:after {
     content: "\f095";
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    position: relative;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .textIcon:after {
+    content: "\f075";
     font-family: 'FontAwesome';
     color: #ffffff;
     position: relative;
