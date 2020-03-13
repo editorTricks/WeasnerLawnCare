@@ -799,6 +799,19 @@ h2.sectionTitleOne {
   .mobileLogo img {
     max-height: 40px;
   }
+  .callText {
+    display: flex;
+    align-items: center;
+  }
+  .phoneIcon {
+    margin-right: 15px;
+    top: 2.5px;
+    position: relative;
+  }
+  .textIcon {
+    position: relative;
+    bottom: 1.5px;
+  }
   .phoneIcon,
   .textIcon  {
     display: block;
