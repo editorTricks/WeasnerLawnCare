@@ -659,6 +659,9 @@ h2.sectionTitleOne {
 .thankyou_message {
   display: none;
 }
+.thankyou_message p.content {
+  margin-bottom: 0;
+}
 /* Footer */
 .footer .container {
   max-width: 600px;
