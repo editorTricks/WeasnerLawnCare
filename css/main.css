@@ -621,11 +621,11 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
-  background-image: linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
-  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, .9), transparent);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, .9), transparent);
   z-index: 1;
 }
 .about .container {
@@ -643,7 +643,7 @@ img {
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  margin: -179px auto 0;
+  margin: -179px auto 10px;
 }
 .about p {
   text-align: center;
