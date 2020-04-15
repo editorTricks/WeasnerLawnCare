@@ -1058,6 +1058,11 @@ h2.sectionTitleOne {
   .locationRight .container {
     text-align: center;
   }
+  /* About */
+  .lawnImage {
+    height: 200px;
+    width: 200px;
+  }
 }
 @media screen and (max-width: 767px){
   /* Global Settings */
@@ -1101,9 +1106,22 @@ h2.sectionTitleOne {
   .about .container {
     padding: 40px 20px;
   }
-  .about img {
+  .aboutImage {
+	border: 10px solid #fff;
     height: 250px;
     width: 250px;
+  }
+  .lawnPortfolio {
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .lawnImage {
+    width: 250px;
+	height: 250px;
+  }
+  .lawnImage:not(:last-child) {
+    margin-bottom: 20px;
   }
   /* Contact */
   .contact .container {
