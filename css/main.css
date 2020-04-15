@@ -635,7 +635,7 @@ img {
   position: relative;
   z-index: 1;
 }
-.about img {
+.aboutImage {
   border: 20px solid #fff;
   height: 350px;
   width: 350px;
@@ -647,6 +647,21 @@ img {
 }
 .about p {
   text-align: center;
+}
+.lawnPortfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.lawnImage {
+  border: 10px solid #fff;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
 }
 /* Contact */
 .contact .container {
