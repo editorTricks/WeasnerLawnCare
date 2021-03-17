@@ -47,6 +47,7 @@ h2.sectionTitleOne {
   text-align: center;
   font-size: 60px;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 h2.sectionTitle {
   font-family: "Montserrat";
@@ -690,12 +691,13 @@ h2.sectionTitleOne {
 }
 /* Footer */
 .footer .container {
-  max-width: 690px;
+  max-width: 730px;
   padding: 40px 20px 10px;
   box-sizing: border-box;
 }
 .footerLogo {
   text-align: center;
+  margin-bottom: 10px;
 }
 .footer p {
   font-size: 12px;
