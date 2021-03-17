@@ -226,7 +226,7 @@ img {
   display: none;
 }
 .desktopNav {
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #fff;
   text-decoration: none;
   font-size: 13px;
@@ -304,6 +304,7 @@ img {
   font-size: 78px;
   font-weight: 500;
   font-family: "Edo";
+  margin-bottom: 10px;
 }
 .banner p {
   font-size: 32px;
