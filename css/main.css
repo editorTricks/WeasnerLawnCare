@@ -690,7 +690,7 @@ img {
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-.question:not(:last-of-type) {
+.question:not(.lastQuestion) {
   border-bottom: 1px solid #ddd;
 }
 .question:hover {
