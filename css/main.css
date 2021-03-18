@@ -738,7 +738,7 @@ img {
   align-items: center;
   margin-bottom: 20px;
 }
-span.cashApp:before {
+span.cashAppSpan:before {
   content: url(images/cash_app_logo.svg);
 }
 .zelle {
