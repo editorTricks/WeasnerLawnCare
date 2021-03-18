@@ -1253,6 +1253,9 @@ h2.sectionTitleOne {
     margin-bottom: 20px;
   }
   /* Frequently Asked Questions */
+  .answer {
+    padding: 40px 20px 20px 20px;
+  }
   .cashApp,
   .zelle {
     flex-wrap: wrap;
