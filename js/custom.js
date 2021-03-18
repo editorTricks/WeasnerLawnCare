@@ -1,4 +1,17 @@
 jQuery(function($) {
+	
+  // Accordion
+  $(".question").click(function() {
+    $(".answer").slideUp();
+    if ($(this).next().is(":visible")) {
+      $(this).next().slideUp();
+      $(this).removeClass("active");
+    } else {
+      $(this).next().slideDown();
+      $('.question').removeClass("active");
+      $(this).addClass("active");
+    }
+  });
 
   // Header Animation
   $(".header").addClass("show animated slideInDown");
