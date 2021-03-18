@@ -780,6 +780,10 @@ img {
   top: 7px;
   position: relative;
 }
+.listContent b:before {
+  content: "\f111";
+  font-family: 'FontAwesome';
+}
 /* Contact */
 .contact .container {
   padding: 80px 20px;
