@@ -674,7 +674,8 @@ img {
   max-width: 1200px;
   box-sizing: border-box;
 }
-.frequentlyAskedQuestions .sectionTitleOne {
+.frequentlyAskedQuestions > p {
+  text-align: center;
   margin-bottom: 40px;
 }
 .question { 
@@ -690,8 +691,8 @@ img {
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-.question:not(.lastQuestion) {
-  border-bottom: 1px solid #ddd;
+.firstQuestion {
+  border-top: 1px solid #ddd;
 }
 .question:hover {
   color: #2ABE0B;
