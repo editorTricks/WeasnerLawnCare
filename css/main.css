@@ -725,6 +725,10 @@ img {
 .answer .content:last-child {
   margin-bottom: 0px;
 }
+.faqLogo {
+  max-height: 19px;
+  padding: 0 5px;
+}
 /* Contact */
 .contact .container {
   padding: 80px 20px;
