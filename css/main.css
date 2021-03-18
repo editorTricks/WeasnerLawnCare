@@ -739,7 +739,7 @@ img {
   margin-bottom: 20px;
 }
 .cashAppSpan:before {
-  background-image: url('cash_app_logo.svg');
+  background-image: url('images/wlc_map.jpg');
   display: block;
 }
 .cashApp img {
