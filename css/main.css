@@ -741,16 +741,13 @@ img {
   align-items: center;
   margin-bottom: 20px;
 }
-.cashAppSpan:before {
-  content: url(https://www.weasnerlawncare.com/images/cash_app_logo.svg);
-  display: inline-flex;
-  width: 25px;
-  vertical-align: middle;
-  margin-left: 6px;
-  margin-right: 3px;
-  align-items: center;
+.cashAppSpan {
+  max-height: 25px;
+  margin-left: 2px;
+  margin-right: 4px;
+  border-radius: 4px;
+  top: 7px;
   position: relative;
-  top: 1px;
 }
 .cashApp img {
   max-height: 30px;
