@@ -674,10 +674,6 @@ img {
   max-width: 1200px;
   box-sizing: border-box;
 }
-.frequentlyAskedQuestions p {
-  text-align: center;
-  margin-bottom: 40px;
-}
 .question { 
   padding: 20px 5px;
   box-sizing: border-box;
