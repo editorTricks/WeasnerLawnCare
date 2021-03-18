@@ -739,7 +739,7 @@ img {
   margin-bottom: 20px;
 }
 .cashAppSpan:before {
-  content: url(images/cash_app_logo.svg);
+  content: url(https://www.weasnerlawncare.com/images/cash_app_logo.svg);
   display: block;
 }
 .cashApp img {
