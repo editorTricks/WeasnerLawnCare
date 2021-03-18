@@ -765,13 +765,14 @@ img {
   margin-right: 20px;
 }
 .zelleAppSpan:before {
-  content: url(https://www.weasnerlawncare.com/images/zelle_logo.svg);
+  background-image: url(https://www.weasnerlawncare.com/images/zelle_logo.svg);
   display: inline-flex;
   width: 13px;
   vertical-align: middle;
   margin-left: 2px;
   margin-right: 2px;
   align-items: center;
+  content; "";
 }
 /* Contact */
 .contact .container {
