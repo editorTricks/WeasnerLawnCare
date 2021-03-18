@@ -691,6 +691,9 @@ img {
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+.question:not(:last-child) {
+  border-bottom: 1px solid #2ABE0B;
+}
 .question:hover {
   color: #2ABE0B;
   -webkit-transition: all 300ms ease;
@@ -715,10 +718,9 @@ img {
 }
 .answer {
   display: none;
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
   box-sizing: border-box;
   line-height: 1.7;
-  background: #f6f7f9;
 }
 .answer .content:last-child {
   margin-bottom: 0px;
