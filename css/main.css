@@ -751,6 +751,7 @@ img {
 }
 .zelle img {
   max-height: 30px;
+  border-radius: 7px;
 }
 /* Contact */
 .contact .container {
