@@ -780,9 +780,16 @@ img {
   top: 7px;
   position: relative;
 }
+.listContent {
+  margin-left: 20px;
+}
 .listContent b:before {
   content: "\f111";
   font-family: 'FontAwesome';
+  margin-right: 10px;
+  font-size: 6px;
+  position: relative;
+  bottom: 3px;
 }
 /* Contact */
 .contact .container {
