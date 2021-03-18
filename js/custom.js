@@ -229,11 +229,11 @@ jQuery(function($) {
   });
 
   $(".nav-1").click(function() {
-    $('html,body').animate({scrollTop: $(".services").offset().top + -60},'slow');
+    $('html,body').animate({scrollTop: $(".services").offset().top + -140},'slow');
   });
   
   $(".nav-2").click(function() {
-    $('html,body').animate({scrollTop: $(".locations").offset().top + -60},'slow');
+    $('html,body').animate({scrollTop: $(".locations").offset().top + -140},'slow');
   });
   
   $(".nav-3").click(function() {
