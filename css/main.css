@@ -741,6 +741,9 @@ img {
 span.cashAppSpan:before {
   background-image: url('images/cash_app_logo.svg');
 }
+.cashApp img {
+  max-height: 30px;
+}
 .zelle {
   border: 1px solid #691BCC;
   padding: 20px;
