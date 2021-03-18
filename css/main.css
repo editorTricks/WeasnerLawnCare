@@ -64,6 +64,9 @@ a {
   color: #2ABE0B;
   text-decoration: none;
 }
+p a:hover {
+  text-decoration: underline;
+}
 img {
   max-width: 100%;
 }
