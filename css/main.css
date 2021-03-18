@@ -731,8 +731,24 @@ img {
 }
 .cashApp {
   border: 1px solid #0BB634;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
 .cashApp img {
+  max-height: 30px;
+}
+.zelle {
+  border: 1px solid #691BCC;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.zelle img {
   max-height: 30px;
 }
 /* Contact */
