@@ -1200,6 +1200,7 @@ h2.sectionTitleOne {
   }
   h2.sectionTitleOne {
     font-size: 42px;
+	line-height: 42px;
   }
   /* Banner */
   .banner h1 {
