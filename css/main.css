@@ -729,6 +729,12 @@ img {
   max-height: 19px;
   padding: 0 5px;
 }
+.cashApp {
+  border: 1px solid #0BB634;
+}
+.cashApp img {
+  max-height: 30px;
+}
 /* Contact */
 .contact .container {
   padding: 80px 20px;
