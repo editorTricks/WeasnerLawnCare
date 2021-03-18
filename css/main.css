@@ -741,11 +741,13 @@ img {
 .cashAppSpan:before {
   content: url(https://www.weasnerlawncare.com/images/cash_app_logo.svg);
   display: inline-flex;
-  width: 13px;
+  width: 25px;
   vertical-align: middle;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 8px;
+  margin-right: 3px;
   align-items: center;
+  position: relative;
+  top: 1px;
 }
 .cashApp img {
   max-height: 30px;
@@ -764,14 +766,13 @@ img {
   border-radius: 7px;
   margin-right: 20px;
 }
-.zelleAppSpan:before {
-  content: url(https://www.weasnerlawncare.com/images/zelle.png);
-  display: inline-flex;
-  width: 13px;
-  vertical-align: middle;
+.zellSpan {
+  max-height: 25px;
   margin-left: 2px;
-  margin-right: 2px;
-  align-items: center;
+  margin-right: 3px;
+  border-radius: 4px;
+  top: 7px;
+  position: relative;
 }
 /* Contact */
 .contact .container {
