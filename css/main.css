@@ -738,11 +738,13 @@ img {
   align-items: center;
   margin-bottom: 20px;
 }
-span.cashAppSpan:before {
-  background-image: url('images/cash_app_logo.svg');
+.cashAppSpan:before {
+  background-image: url('cash_app_logo.svg');
+  display: block;
 }
 .cashApp img {
   max-height: 30px;
+  margin-right: 20px;
 }
 .zelle {
   border: 1px solid #691BCC;
