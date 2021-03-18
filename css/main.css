@@ -743,9 +743,10 @@ img {
 }
 .cashAppSpan {
   max-height: 25px;
-  margin-left: 2px;
-  margin-right: 4px;
-  border-radius: 4px;
+  width: 100%;
+  max-width: 25px;
+  margin-left: 6px;
+  margin-right: 3px;
   top: 7px;
   position: relative;
 }
