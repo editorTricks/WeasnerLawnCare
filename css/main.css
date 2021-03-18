@@ -1252,6 +1252,18 @@ h2.sectionTitleOne {
   .lawnImage:not(:last-child) {
     margin-bottom: 20px;
   }
+  /* Frequently Asked Questions */
+  .cashApp,
+  .zelle {
+    flex-wrap: wrap;
+  }
+  .cashApp img,
+  .zelle img {
+    margin-bottom: 10px;
+  }
+  .zelle p b {
+    word-break: break-all;
+  }
   /* Contact */
   .contact .container {
     padding: 40px 20px;
