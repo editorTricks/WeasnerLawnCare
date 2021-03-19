@@ -1,26 +1,22 @@
 jQuery(function($) {
 	
-  // Accordion
-  function faqScroll() {
-    $(".question").click(function() {
-	  setTimeout(function() {
-        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
-	  }, 2000);
-	});
-  }
-  
+  // Accordion  
   $(".question").click(function() {
     $(".answer").slideUp();
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
       $(this).removeClass("active");
-	  faqScroll();
+	  setTimeout(function() {
+        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
+	  }, 2000);
     } 
 	else {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
-	  faqScroll();
+	  setTimeout(function() {
+        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
+	  }, 2000);
     }
   });
 
