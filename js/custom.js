@@ -2,6 +2,7 @@ jQuery(function($) {
 	
   // Accordion
   $(".question").click(function() {
+	$('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
     $(".answer").slideUp();
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
@@ -11,7 +12,6 @@ jQuery(function($) {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
-	  $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
     }
   });
 
