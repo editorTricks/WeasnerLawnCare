@@ -7,11 +7,13 @@ jQuery(function($) {
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
       $(this).removeClass("active");
+	  $('html, body').stop();
     } 
 	else {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
+	  $('html, body').stop();
     }
   });
 
