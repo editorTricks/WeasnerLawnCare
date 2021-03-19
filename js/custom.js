@@ -14,9 +14,6 @@ jQuery(function($) {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
-	  setTimeout(function() {
-        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
-	  }, 2000);
     }
   });
 
