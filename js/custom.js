@@ -1,6 +1,6 @@
 jQuery(function($) {
 	
-  // Accordion  
+  // Accordion
   $(".question").click(function() {
     $(".answer").slideUp();
     if ($(this).next().is(":visible")) {
