@@ -1,19 +1,26 @@
 jQuery(function($) {
 	
   // Accordion
+  function faqScroll() {
+    $(".question").click(function() {
+	  setTimeout(function() {
+        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
+	  }, 2000);
+	});
+  }
+  
   $(".question").click(function() {
-	$('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
     $(".answer").slideUp();
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
       $(this).removeClass("active");
-	  $('html, body').stop();
+	  faqScroll();
     } 
 	else {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
-	  $('html, body').stop();
+	  faqScroll();
     }
   });
 
