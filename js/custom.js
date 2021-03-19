@@ -6,16 +6,13 @@ jQuery(function($) {
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
       $(this).removeClass("active");
-    } else {
+    } 
+	else {
       $(this).next().slideDown();
       $('.question').removeClass("active");
       $(this).addClass("active");
+	  $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
     }
-  });
-  
-  // FAQs
-  $(".question").click(function() {
-    $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
   });
 
   // Header Animation
