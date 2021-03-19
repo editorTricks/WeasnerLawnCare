@@ -12,6 +12,11 @@ jQuery(function($) {
       $(this).addClass("active");
     }
   });
+  
+  // FAQs
+  $(".question").click(function() {
+    $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
+  });
 
   // Header Animation
   $(".header").addClass("show animated slideInDown");
