@@ -3,12 +3,12 @@ jQuery(function($) {
   // Accordion  
   $(".question").click(function() {
     $(".answer").slideUp();
+	setTimeout(function() {
+      $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
+	}, 2000);
     if ($(this).next().is(":visible")) {
       $(this).next().slideUp();
       $(this).removeClass("active");
-	  setTimeout(function() {
-        $('html,body').animate({scrollTop: $(this).offset().top + -60},'slow');
-	  }, 2000);
     } 
 	else {
       $(this).next().slideDown();
