@@ -64,7 +64,7 @@ jQuery(function($) {
   });
   
   // Mowing & Square Feet Buttons
-  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
+  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, cut frequency, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
 	
   function calculate() {
 	  
