@@ -83,27 +83,39 @@ jQuery(function($) {
 	  var tip = "Your yard is equal to or bigger than 1 acre. Use " + "<div class='acreTip'>" + "'Acre'" + "</div>" + " instead of 'Square Feet' for an accurate estimate.";
 
 	  if ((inputValue > 0) && (inputValue <= 5000)) {
-        $(".results").append("$25*");
-	    $(".disclaimer").append(disclaimer);
-      }
-	  else if ((inputValue > 5000) && (inputValue <= 10000)) {
-        $(".results").append("$30*");
-	    $(".disclaimer").append(disclaimer);
-      }
-	  else if ((inputValue > 10000) && (inputValue <= 20000)) {
         $(".results").append("$35*");
 	    $(".disclaimer").append(disclaimer);
       }
-	  else if ((inputValue > 20000) && (inputValue <= 30000)) {
+	  else if ((inputValue > 5000) && (inputValue <= 10000)) {
         $(".results").append("$40*");
 	    $(".disclaimer").append(disclaimer);
       }
-	  else if ((inputValue > 30000) && (inputValue <= 40000)) {
+	  else if ((inputValue > 10000) && (inputValue <= 15000)) {
         $(".results").append("$45*");
 	    $(".disclaimer").append(disclaimer);
       }
-	  else if ((inputValue > 40000) && (inputValue <= 43560)) {
+	  else if ((inputValue > 15000) && (inputValue <= 20000)) {
         $(".results").append("$50*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 20000) && (inputValue <= 25000)) {
+        $(".results").append("$55*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 25000) && (inputValue <= 30000)) {
+        $(".results").append("$60*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 30000) && (inputValue <= 35000)) {
+        $(".results").append("$65*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 35000) && (inputValue <= 40000)) {
+        $(".results").append("$70*");
+	    $(".disclaimer").append(disclaimer);
+      }
+	  else if ((inputValue > 40000) && (inputValue <= 43560)) {
+        $(".results").append("$75*");
 	    $(".disclaimer").append(disclaimer);
 	  }
 	  else if (inputValue > 43560) {
