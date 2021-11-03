@@ -291,7 +291,7 @@ img {
 }
 .banner .container {
   display: none;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   padding: 276px 20px 218px;
   box-sizing: border-box;
   flex-direction: column;
