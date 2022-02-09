@@ -126,6 +126,8 @@ jQuery(function($) {
 	// Weekly Mowing + Acre
 	function acreCost() {
 		
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
 		var convertedInputValue = (inputValue * 43560);
@@ -180,7 +182,6 @@ jQuery(function($) {
 	    }
 	    else if (convertedInputValue > 43560) {
           $(".tip").append(tip).addClass("animated shake");
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 
 	}
