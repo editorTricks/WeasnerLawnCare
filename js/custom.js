@@ -80,7 +80,8 @@ jQuery(function($) {
 		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
 		
 		// Input Box Value
-	    var inputValue = $(".calculatorInput").val();
+	    var inputValue = $(".calculatorInput").val().replace(/,/gi, "");
+		var inputValueComma = inputValue.split(/(?=(?:\d{3})+$)/).join(",");
 		
 		// Pricing		
 		if ((inputValue > 0) && (inputValue <= 5000)) {
