@@ -64,12 +64,9 @@ jQuery(function($) {
   });
   
   // Mowing & Square Feet Buttons
-  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, cut frequency, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
+  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
 	
   function calculate() {
-	  
-	// Input Box Value
-	var inputValue = $(".calculatorInput").val();
 	
 	// Remove Results
 	$(".results, .disclaimer, .tip").empty();
@@ -78,8 +75,12 @@ jQuery(function($) {
 	$(".tip").append(tip).removeClass("animated shake");
 	  
 	// Weekly Mowing
-    function mowingCost() {
+    function squareFeetCost() {
 		
+		// Input Box Value
+	    var inputValue = $(".calculatorInput").val();
+		
+		// Pricing		
 		if ((inputValue > 0) && (inputValue <= 5000)) {
           $(".results").append("$40*");
 	      $(".disclaimer").append(disclaimer);
@@ -122,14 +123,22 @@ jQuery(function($) {
 		
 	}
 	
+	function acreCost {
+		
+		// Input Box Value
+	    var inputValue = $(".calculatorInput").val();
+		var convertedInputValue = (inputValue * 43560);
+		alert(convertedInputValue);
+		
+	}
+	
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
-		mowingCost();
+		squareFeetCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
-		inputValue == (inputValue * 43560);
-		mowingCost();
+		acreCost();
 	  }
 	  
     }
