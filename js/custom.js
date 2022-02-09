@@ -123,7 +123,7 @@ jQuery(function($) {
 		
 	}
 	
-	function acreCost {
+	function acreCost() {
 		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
