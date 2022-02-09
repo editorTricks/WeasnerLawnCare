@@ -513,7 +513,8 @@ img {
   border: 1px solid #2abe0b;
   border-radius: 25px;
   color: #2abe0b;
-  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 900;
   cursor: pointer;
   -webkit-transition: all 100ms ease;
   -moz-transition: all 100ms ease;
