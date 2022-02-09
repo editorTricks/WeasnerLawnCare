@@ -64,7 +64,7 @@ jQuery(function($) {
   });
   
   // Mowing & Square Feet Buttons
-  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
+  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, time of the year, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
 	
   function calculate() {
 	
@@ -77,7 +77,7 @@ jQuery(function($) {
 	// Weekly Mowing + Square Feet
     function weeklySquareFeetCost() {
 		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
 		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
@@ -128,7 +128,7 @@ jQuery(function($) {
 	// Weekly Mowing + Acre
 	function weeklyAcreCost() {
 		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
 		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
@@ -191,7 +191,7 @@ jQuery(function($) {
 	// Bi-Weekly Mowing + Square Feet
     function biWeeklySquareFeetCost() {
 		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
 		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
@@ -242,7 +242,7 @@ jQuery(function($) {
 	// Bi-Weekly Mowing + Acre
 	function biWeeklyAcreCost() {
 		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
 		
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
@@ -251,43 +251,43 @@ jQuery(function($) {
 		$(".noteConversion").empty();
 		
 		// Pricing		
-		if ((inputValue > 0) && (inputValue <= 5000)) {
+		if ((convertedInputValue > 0) && (convertedInputValue <= 5000)) {
           $(".results").append("$60*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 5000) && (inputValue <= 10000)) {
+	    else if ((convertedInputValue > 5000) && (convertedInputValue <= 10000)) {
           $(".results").append("$60*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 10000) && (inputValue <= 15000)) {
+	    else if ((convertedInputValue > 10000) && (convertedInputValue <= 15000)) {
           $(".results").append("$67.50*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 15000) && (inputValue <= 20000)) {
+	    else if ((convertedInputValue > 15000) && (convertedInputValue <= 20000)) {
           $(".results").append("$75*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 20000) && (inputValue <= 25000)) {
+	    else if ((convertedInputValue > 20000) && (convertedInputValue <= 25000)) {
           $(".results").append("$82.50*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 25000) && (inputValue <= 30000)) {
+	    else if ((convertedInputValue > 25000) && (convertedInputValue <= 30000)) {
           $(".results").append("$90*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 30000) && (inputValue <= 35000)) {
+	    else if ((convertedInputValue > 30000) && (convertedInputValue <= 35000)) {
           $(".results").append("$97.50*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 35000) && (inputValue <= 40000)) {
+	    else if ((convertedInputValue > 35000) && (convertedInputValue <= 40000)) {
           $(".results").append("$105*");
 	      $(".disclaimer").append(disclaimer);
         }
-	    else if ((inputValue > 40000) && (inputValue <= 43560)) {
+	    else if ((convertedInputValue > 40000) && (convertedInputValue <= 43560)) {
           $(".results").append("$112.50*");
 	      $(".disclaimer").append(disclaimer);
 	    }
-	    else if (inputValue > 43560) {
+	    else if (convertedInputValue > 43560) {
           $(".tip").append(tip).addClass("animated shake");
         }
 
