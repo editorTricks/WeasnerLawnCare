@@ -141,46 +141,46 @@ jQuery(function($) {
 	    else if ((convertedInputValue > 5000) && (convertedInputValue <= 10000)) {
           $(".results").append("$40*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 10000) && (convertedInputValue <= 15000)) {
           $(".results").append("$45*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 15000) && (convertedInputValue <= 20000)) {
           $(".results").append("$50*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 20000) && (convertedInputValue <= 25000)) {
           $(".results").append("$55*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 25000) && (convertedInputValue <= 30000)) {
           $(".results").append("$60*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 30000) && (convertedInputValue <= 35000)) {
           $(".results").append("$65*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 35000) && (convertedInputValue <= 40000)) {
           $(".results").append("$70*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 40000) && (convertedInputValue <= 43560)) {
           $(".results").append("$75*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
 	    }
 	    else if (convertedInputValue > 43560) {
           $(".tip").append(tip).addClass("animated shake");
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 
 	}

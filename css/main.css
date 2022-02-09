@@ -471,8 +471,8 @@ img {
   justify-content: center;
   margin-bottom: 40px;
 }
-.selection:last-child {
-  margin-bottom: 0px;
+.selection.lastSelection {
+  margin-bottom: 10px;
 }
 .selection:last-child {
   margin-bottom: 0;
