@@ -80,8 +80,7 @@ jQuery(function($) {
 		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
 		
 		// Input Box Value
-	    var inputValue = $(".calculatorInput").val().replace(/,/gi, "");
-		var inputValueComma = inputValue.split(/(?=(?:\d{3})+$)/).join(",");
+	    var inputValue = $(".calculatorInput").val();
 		
 		// Pricing		
 		if ((inputValue > 0) && (inputValue <= 5000)) {
@@ -240,6 +239,60 @@ jQuery(function($) {
 		
 	}
 	
+	// Bi-Weekly Mowing + Acre
+	function biWeeklyAcreCost() {
+		
+		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
+		
+		// Input Box Value
+	    var inputValue = $(".calculatorInput").val();
+		var convertedInputValue = (inputValue * 43560);
+		var convertedInputValueComma = convertedInputValue.toLocaleString();
+		$(".noteConversion").empty();
+		
+		// Pricing		
+		if ((inputValue > 0) && (inputValue <= 5000)) {
+          $(".results").append("$60*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 5000) && (inputValue <= 10000)) {
+          $(".results").append("$60*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 10000) && (inputValue <= 15000)) {
+          $(".results").append("$67.50*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 15000) && (inputValue <= 20000)) {
+          $(".results").append("$75*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 20000) && (inputValue <= 25000)) {
+          $(".results").append("$82.50*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 25000) && (inputValue <= 30000)) {
+          $(".results").append("$90*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 30000) && (inputValue <= 35000)) {
+          $(".results").append("$97.50*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 35000) && (inputValue <= 40000)) {
+          $(".results").append("$105*");
+	      $(".disclaimer").append(disclaimer);
+        }
+	    else if ((inputValue > 40000) && (inputValue <= 43560)) {
+          $(".results").append("$112.50*");
+	      $(".disclaimer").append(disclaimer);
+	    }
+	    else if (inputValue > 43560) {
+          $(".tip").append(tip).addClass("animated shake");
+        }
+
+	}
+	
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
@@ -257,7 +310,7 @@ jQuery(function($) {
 		biWeeklySquareFeetCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
-		acreCost();
+		biWeeklyAcreCost();
 	  }
 	  
     }
