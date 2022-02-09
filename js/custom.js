@@ -129,13 +129,14 @@ jQuery(function($) {
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
 		var convertedInputValue = (inputValue * 43560);
+		var convertedInputValueComma = convertedInputValue.toLocaleString();
 		$(".noteConversion").empty();
 		
 		// Pricing		
 		if ((convertedInputValue > 0) && (convertedInputValue <= 5000)) {
           $(".results").append("$40*");
 	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValue + " Square Feet");
+		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
         }
 	    else if ((convertedInputValue > 5000) && (convertedInputValue <= 10000)) {
           $(".results").append("$40*");
