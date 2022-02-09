@@ -242,7 +242,7 @@ jQuery(function($) {
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
-		biWeeklySquareFeetCost();
+		weeklySquareFeetCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
 		weeklyAcreCost();
@@ -253,7 +253,7 @@ jQuery(function($) {
 	else if ($('.mowingBiWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
-		squareFeetCost();
+		biWeeklySquareFeetCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
 		acreCost();
