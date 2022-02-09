@@ -78,12 +78,12 @@ jQuery(function($) {
 	$(".tip").append(tip).removeClass("animated shake");
 	  
 	// Mowing + Square Feet  
-    if ($('.mowingCalculate').hasClass('green') && $('.squareFeetCalculate').hasClass('green')) {
+    if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green')) {
 		
 	  var tip = "Your yard is equal to or bigger than 1 acre. Use " + "<div class='acreTip'>" + "'Acre'" + "</div>" + " instead of 'Square Feet' for an accurate estimate.";
 
 	  if ((inputValue > 0) && (inputValue <= 5000)) {
-        $(".results").append("$35*");
+        $(".results").append("$40*");
 	    $(".disclaimer").append(disclaimer);
       }
 	  else if ((inputValue > 5000) && (inputValue <= 10000)) {
@@ -123,8 +123,8 @@ jQuery(function($) {
       }
     }
 	
-	// Mowing + Acre
-	if ($('.mowingCalculate').hasClass('green') && $('.acreCalculate').hasClass('green')) {
+	// Mowing Bi-Weekly + Acre
+	if ($('.mowingBiWeekly').hasClass('green') && $('.acreCalculate').hasClass('green')) {
 	
       var tip = "Your yard is less than 1 acre. Use " + "<div class='squareFeetTip'>" + "'Square Feet'" + "</div>" + " instead of 'Acre'.";
 		
