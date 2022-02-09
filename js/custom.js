@@ -189,7 +189,7 @@ jQuery(function($) {
 	}
 	
 	// Bi-Weekly Mowing + Square Feet
-    function weeklySquareFeetCost() {
+    function biWeeklySquareFeetCost() {
 		
 		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre.";
 		
@@ -242,7 +242,7 @@ jQuery(function($) {
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
-		weeklySquareFeetCost();
+		biWeeklySquareFeetCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
 		weeklyAcreCost();
