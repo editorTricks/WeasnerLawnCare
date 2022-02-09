@@ -533,11 +533,11 @@ img {
   -o-transition: all 100ms ease;
   transition: all 100ms ease;
 }
-.mowingCalculate,
+.mowingWeekly,
 .squareFeetCalculate {
   margin-right: 5px;
 }
-.leafCalculate,
+.mowingBiWeekly,
 .acreCalculate {
   margin-left: 5px;
 }
