@@ -129,6 +129,7 @@ jQuery(function($) {
 		// Input Box Value
 	    var inputValue = $(".calculatorInput").val();
 		var convertedInputValue = (inputValue * 43560);
+		$(".noteConversion").append(convertedInputValue) + "Square Feet";
 		
 		// Pricing		
 		if ((convertedInputValue > 0) && (convertedInputValue <= 5000)) {
