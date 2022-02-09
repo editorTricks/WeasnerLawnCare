@@ -77,7 +77,7 @@ jQuery(function($) {
 	// Remove Tip Animation
 	$(".tip").append(tip).removeClass("animated shake");
 	  
-	// Mowing + Square Feet
+	// Weekly Mowing
     function mowingCost() {
 		
 		if ((inputValue > 0) && (inputValue <= 5000)) {
@@ -125,10 +125,13 @@ jQuery(function($) {
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
-		  
 		mowingCost();
-		
 	  }
+	  else if ($('.acreCalculate').hasClass('green')) {
+		inputValue == inputValue*43560
+		mowingCost();
+	  }
+	  
     }
 	
 	// Mowing Bi-Weekly + Acre
