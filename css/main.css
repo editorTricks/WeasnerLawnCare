@@ -521,8 +521,6 @@ img {
 .calculatorButton.green {
   background: #2abe0b;
   color: #fff;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .calculatorButton:hover {
   background: #2abe0b;
