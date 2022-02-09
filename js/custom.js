@@ -128,7 +128,7 @@ jQuery(function($) {
 		mowingCost();
 	  }
 	  else if ($('.acreCalculate').hasClass('green')) {
-		inputValue == inputValue*43560
+		inputValue == (inputValue * 43560);
 		mowingCost();
 	  }
 	  
