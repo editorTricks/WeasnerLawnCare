@@ -4,6 +4,7 @@ jQuery(function($) {
 
 	$(".button-success").on("click", function() {
 		name = $("#name").val();
+		address =$("address").val();
 		email = $("#email").val();
 		phoneNumber = $("#number").val();
 		message = $("#message").val();
@@ -12,6 +13,7 @@ jQuery(function($) {
 			method: "POST",
 			data: {	
 					Name: name,
+					Address: address,
 					Email: email,
 					Phone: phoneNumber,
 					Message: message
