@@ -344,6 +344,10 @@ jQuery(function($) {
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
+	  $(".squareFeetCalculate").on("click", function(){
+	    var convertedInputValue = (inputValue * 43560);
+		$(".calculatorInput").val(convertedInputValue);
+	  });
 	}
 	
 	// Mowing Bi-Weekly + Acre
