@@ -13,7 +13,7 @@ jQuery(function($) {
 			data: {	
 					Name: name,
 					Email: email,
-					Phone Number: phoneNumber,
+					Phone: phoneNumber,
 					Message: message
 				},
 			dataType: "json"
