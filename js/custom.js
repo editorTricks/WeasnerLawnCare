@@ -5,7 +5,7 @@ jQuery(function($) {
     $(".button-success").on("click", function() {
       message = $("#contactform").serialize();
 	  $(".form-elements").hide();
-      $(".thankyou_message"),show();
+      $(".thankyou_message").fadeIn();
       return false;
     });
 	
