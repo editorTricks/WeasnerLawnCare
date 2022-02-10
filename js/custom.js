@@ -314,6 +314,7 @@ jQuery(function($) {
 
 	}
 	
+	// Mowing Weekly Activation	
     if ($('.mowingWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
@@ -325,6 +326,7 @@ jQuery(function($) {
 	  
     }
 	
+	// Mowing Bi-Weekly Activation
 	else if ($('.mowingBiWeekly').hasClass('green')) {
 		
 	  if ($('.squareFeetCalculate').hasClass('green')) {
@@ -336,79 +338,25 @@ jQuery(function($) {
 	  
     }
 	
+	// Convert Square Feet to Acre or Vice Versa
 	var inputValue = $(".calculatorInput").val();
 	
-	// Square Feet to Acre Conversion
-	if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
+	// Square Feet to Acre
+	if ($('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
-	  $(".squareFeetCalculate").on("click", function(){
+	}
+	
+	// Acre to Square Feet
+	if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
+      $(".squareFeetCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
 	
-	// Mowing Bi-Weekly + Acre
-	if ($('.mowingBiWeekly').hasClass('green') && $('.acreCalculate').hasClass('green')) {
-	
-      var tip = "Your yard is less than 1 acre. Use " + "<div class='squareFeetTip'>" + "'Square Feet'" + "</div>" + " instead of 'Acre'.";
-		
-      if ((inputValue > 0) && (inputValue < 1)) {
-        $(".tip").append(tip).addClass("animated shake");
-      }
-	  else if ((inputValue >= 1) && (inputValue <= 2)) {
-        var acreCost60 = 60*inputValue;
-        $(".results").append("$" + acreCost60 + "*");
-		$(".disclaimer").append(disclaimer);
-      }
-	  else if ((inputValue >= 2.0) && (inputValue <= 3)) {
-        var acreCost55 = 55*inputValue;
-        $(".results").append("$" + acreCost55 + "*");
-		$(".disclaimer").append(disclaimer);
-      }
-	  else if (inputValue > 3) {
-        var acreCost50 = 50*inputValue;
-		var acreCost50Comma = acreCost50.toLocaleString();
-        $(".results").append("$" + acreCost50Comma + "*");
-		$(".disclaimer").append(disclaimer);
-      }
-    }
-	
-	// Leaf + Square Feet
-	if ($('.leafCalculate').hasClass('green') && $('.squareFeetCalculate').hasClass('green')) {
-		
-	  var tip = "Your yard is equal to or bigger than 1 acre. Use " + "<div class='acreTip'>" + "'Acre'" + "</div>" + " instead of 'Square Feet' for an accurate estimate.";
-      
-	  if ((inputValue > 0) && (inputValue <= 43560)) {
-	    var acreDivide = inputValue/43560;
-		var leafSqaureFeetCost = Math.trunc(acreDivide*461.538461538);
-		$(".results").append("$" + leafSqaureFeetCost + "*");
-		$(".disclaimer").append(disclaimer);
-	  }
-	  else if (inputValue > 43560) {
-        $(".tip").append(tip).addClass("animated shake");
-      }
-	  
-    }
-	
-	// Leaf + Acre
-	if ($('.leafCalculate').hasClass('green') && $('.acreCalculate').hasClass('green')) {
-		
-      var tip = "Your yard is less than 1 acre. Use " + "<div class='squareFeetTip'>" + "'Square Feet'" + "</div>" + " instead of 'Acre'.";
-      
-	  if ((inputValue > 0) && (inputValue < 1)) {
-        $(".tip").append(tip).addClass("animated shake");
-      }
-	  else if (inputValue >= 1) {
-		var leafAcreCost = Math.trunc(inputValue*461.538461538);
-		var leafAcreCostComma = leafAcreCost.toLocaleString();
-		$(".results").append("$" + leafAcreCostComma + "*");
-		$(".disclaimer").append(disclaimer);
-      }
-	  
-    }
   }
   
   // Calculate When a Button is Clicked
