@@ -341,7 +341,7 @@ jQuery(function($) {
 	// Square Feet to Acre Conversion
 	if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
-	    var convertedInputValue = (inputValue * 43560);
+	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
