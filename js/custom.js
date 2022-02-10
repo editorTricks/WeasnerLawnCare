@@ -3,11 +3,15 @@ jQuery(function($) {
 	var message = "";
 
 	$(".button-success").on("click", function() {
+		name = $("#name").val();
 		message = $("#message").val();
 		$.ajax({
 			url: "https://formspree.io/f/mwkylglg", 
 			method: "POST",
-			data: {message: message},
+			data: {	
+					Name: name
+					message: message
+				},
 			dataType: "json"
 		});
 		alert('Thanks for the email, we\'ll be in touch promptly.');
