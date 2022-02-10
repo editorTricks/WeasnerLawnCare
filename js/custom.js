@@ -12,8 +12,8 @@ jQuery(function($) {
 			method: "POST",
 			data: {	
 					Name: name,
-					Email: email
-					Phone Number: phoneNumber
+					Email: email,
+					Phone Number: phoneNumber,
 					Message: message
 				},
 			dataType: "json"
