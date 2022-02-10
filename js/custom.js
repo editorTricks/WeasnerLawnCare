@@ -42,7 +42,7 @@ jQuery(function($) {
   });
   
   $(".acreCalculate").on("click", function() {
-    $('.calculatorInput').attr('placeholder','2.6 acres'); 
+    $('.calculatorInput').attr('placeholder','0.24 acres'); 
   });
   
   // Mowing & Square Feet Buttons
