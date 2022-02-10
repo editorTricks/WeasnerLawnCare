@@ -1,5 +1,6 @@
 jQuery(function($) {
 	
+	// Formspree
 	var message = "";
 
 	$(".button-success").on("click", function() {
@@ -340,34 +341,7 @@ jQuery(function($) {
 		biWeeklyAcreCost();
 	  }
 	  
-    }
-	
-	// Convert Square Feet to Acre
-	if ($('.squareFeetCalculate').hasClass('green')) {
-	  var inputValue = $(".calculatorInput").val();
-      $(".acreCalculate").on("click", function(){
-	    var convertedInputValue = (inputValue / 43560);
-		$(".calculatorInput").val(convertedInputValue);
-	  });
-	  $(".squareFeetCalculate").on("click", function(){
-	    var convertedInputValue = (inputValue * 43560);
-		$(".calculatorInput").val(convertedInputValue);
-	  });
-	}
-	
-	// Convert Acre to Square Feet
-	if ($('.acreCalculate').hasClass('green')) {
-	  var inputValue = $(".calculatorInput").val();
-      $(".squareFeetCalculate").on("click", function(){
-	    var convertedInputValue = (inputValue * 43560);
-		$(".calculatorInput").val(convertedInputValue);
-	  });
-	  $(".acreCalculate").on("click", function(){
-	    var convertedInputValue = (inputValue / 43560);
-		$(".calculatorInput").val(convertedInputValue);
-	  });
-	}
-	
+    }	
   }
   
   // Calculate When a Button is Clicked
