@@ -4,7 +4,8 @@ jQuery(function($) {
 
     $(".button-success").on("click", function() {
       message = $("#contactform").serialize();
-      alert('Thanks for the email, we\'ll be in touch promptly.');
+	  $(".form-elements").hide();
+      $(".thankyou_message"),show();
       return false;
     });
 	
