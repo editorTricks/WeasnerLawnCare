@@ -1,4 +1,14 @@
 jQuery(function($) {
+
+  formbutton("create", {
+    onResponse: function(ok, setStatus) {
+    if (ok) {
+      setStatus("Your request was received. We'll be in touch shortly.");
+    } else {
+      setStatus("<span style='color:red'>There was a problem. We've been notified.</span>");
+    },
+    //...
+  };
 	
   // Accordion
   $(".question").click(function() {
