@@ -324,6 +324,7 @@ jQuery(function($) {
 	if ($('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue / 43560);
+		convertedInputValue = Math.trunc(number*100)/100;
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
