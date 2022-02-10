@@ -324,7 +324,7 @@ jQuery(function($) {
 	if ($('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue / 43560);
-		$(".calculatorInput").val(convertedInputValue + " acres");
+		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
 	
@@ -332,7 +332,7 @@ jQuery(function($) {
 	else if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
       $(".squareFeetCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue * 43560);
-		$(".calculatorInput").val(convertedInputValue + " square feet");
+		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
 	
