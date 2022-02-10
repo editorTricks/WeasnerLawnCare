@@ -1,14 +1,18 @@
 jQuery(function($) {
 
-  formbutton("create", {
-    onResponse: function(ok, setStatus) {
-    if (ok) {
-      setStatus("Your request was received. We'll be in touch shortly.");
-    } else {
-      setStatus("<span style='color:red'>There was a problem. We've been notified.</span>");
-    },
-    //...
-  };
+  var message = "";
+
+$(".button-success").on("click", function() {
+    message = $("#contactform").serialize();
+    $.ajax({
+        url: "//formspree.io/weasnerlawncare@gmail.com", 
+        method: "POST",
+        data: {message: message},
+        dataType: "json"
+    });
+    alert('Thanks for the email, we\'ll be in touch promptly.');
+    return false;
+});
 	
   // Accordion
   $(".question").click(function() {
