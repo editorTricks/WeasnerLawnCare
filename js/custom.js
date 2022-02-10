@@ -326,16 +326,15 @@ jQuery(function($) {
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
-	  if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
-        $(".squareFeetCalculate").on("click", function(){
-	      var convertedInputValue = (inputValue * 43560);
-		  $(".calculatorInput").val(convertedInputValue);
-	    });
-	  }
 	}
 	
 	// Acre to Square Feet
-	
+	if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
+      $(".squareFeetCalculate").on("click", function(){
+	    var convertedInputValue = (inputValue * 43560);
+		$(".calculatorInput").val(convertedInputValue);
+	  });
+	}
 	
   }
   
