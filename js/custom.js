@@ -1,12 +1,4 @@
 jQuery(function($) {
-
-  var message = "";
-
-$(".button-success").on("click", function() {
-    message = $("#contactform").serialize();
-    alert('Thanks for the email, we\'ll be in touch promptly.');
-    return false;
-});
 	
   // Accordion
   $(".question").click(function() {
