@@ -36,24 +36,6 @@ jQuery(function($) {
 	}
   });
   
-  // Tip
-  $(".tip").on("click", function(){
-    if ($(".squareFeetCalculate").hasClass("green")) {
-      $(".squareFeetCalculate").removeClass("green");
-	  $(".acreCalculate").addClass("green");
-	  $('.calculatorInput').val('');
-	  $('.calculatorInput').attr('placeholder','0.25 acres');
-	  $(this).empty();
-    }
-	else if ($(".acreCalculate").hasClass("green")) {
-      $(".acreCalculate").removeClass("green");
-	  $(".squareFeetCalculate").addClass("green");
-	  $('.calculatorInput').val('');
-	  $('.calculatorInput').attr('placeholder','23,750 square feet'); 
-	  $(this).empty();
-    }
-  });
-  
   // Change Placeholder
   $(".squareFeetCalculate").on("click", function() {
     $('.calculatorInput').attr('placeholder','23,750 square feet'); 
@@ -69,11 +51,8 @@ jQuery(function($) {
   function calculate() {
 	
 	// Remove Results
-	$(".results, .disclaimer, .tip").empty();
+	$(".results, .disclaimer").empty();
 	
-	// Remove Tip Animation
-	$(".tip").append(tip).removeClass("animated shake");
-	  
 	// Weekly Mowing + Square Feet
     function weeklySquareFeetCost() {
 		
