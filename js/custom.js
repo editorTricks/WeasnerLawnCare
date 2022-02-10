@@ -4,17 +4,22 @@ jQuery(function($) {
 
 	$(".button-success").on("click", function() {
 		name = $("#name").val();
+		email = $("#email").val();
+		phoneNumber = $("#number").val();
 		message = $("#message").val();
 		$.ajax({
 			url: "https://formspree.io/f/mwkylglg", 
 			method: "POST",
 			data: {	
 					Name: name,
-					message: message
+					Email: email
+					Phone Number: phoneNumber
+					Message: message
 				},
 			dataType: "json"
 		});
-		alert('Thanks for the email, we\'ll be in touch promptly.');
+		$(".form-elements").hide();
+		$(".thankyou_message").fadeIn();
 		return false;
 	});
 	
