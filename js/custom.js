@@ -5,7 +5,7 @@ jQuery(function($) {
 $(".button-success").on("click", function() {
     message = $("#contactform").serialize();
     $.ajax({
-        url: "//formspree.io/weasnerlawncare@gmail.com", 
+        url: "https://formspree.io/f/mwkylglg", 
         method: "POST",
         data: {message: message},
         dataType: "json"
