@@ -3,7 +3,7 @@ jQuery(function($) {
 	var message = "";
 
 	$(".button-success").on("click", function() {
-		message = $("#message").serialize();
+		message = $("#message").val();
 		$.ajax({
 			url: "https://formspree.io/f/mwkylglg", 
 			method: "POST",
