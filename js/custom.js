@@ -1,20 +1,18 @@
 jQuery(function($) {
 	
+	var message = "";
 
-	$(".button-success").on("click", function() {
-      $.ajax({
-        url: "https://formspree.io/f/mwkylglg", 
-        method: "POST",
-		data: {
-    email: "a.visitor@email.com",
-    message: "Hello!"
-  }
-		dataType: "json"
-      });
-      $(".form-elements").hide();
-      $(".thankyou_message").fadeIn();
-      return false;
-    });
+	$("#sendMessage").on("click", function() {
+		message = $("#message").serialize();
+		$.ajax({
+			url: "//formspree.io/dynamicrealities@gmail.com", 
+			method: "POST",
+			data: {message: message},
+			dataType: "json"
+		});
+		alert('Thanks for the email, we\'ll be in touch promptly.');
+		return false;
+	});
 	
   // Accordion
   $(".question").click(function() {
