@@ -4,7 +4,7 @@ jQuery(function($) {
 
 	$(".button-success").on("click", function() {
 		name = $("#name").val();
-		address =$("address").val();
+		address =$("#address").val();
 		email = $("#email").val();
 		phoneNumber = $("#number").val();
 		message = $("#message").val();
