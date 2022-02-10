@@ -42,7 +42,7 @@ jQuery(function($) {
       $(".squareFeetCalculate").removeClass("green");
 	  $(".acreCalculate").addClass("green");
 	  $('.calculatorInput').val('');
-	  $('.calculatorInput').attr('placeholder','2.6 acres');
+	  $('.calculatorInput').attr('placeholder','0.25 acres');
 	  $(this).empty();
     }
 	else if ($(".acreCalculate").hasClass("green")) {
@@ -335,6 +335,15 @@ jQuery(function($) {
 	  }
 	  
     }
+	
+	var inputValue = $(".calculatorInput").val();
+	
+	// Square Feet to Acre Conversion
+	if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green') && (inputValue > 0) {
+      $(".acreCalculate").on("click", function(){
+	    alert("Acre Clicked! Time to Convert.") 
+	  });
+	}
 	
 	// Mowing Bi-Weekly + Acre
 	if ($('.mowingBiWeekly').hasClass('green') && $('.acreCalculate').hasClass('green')) {
