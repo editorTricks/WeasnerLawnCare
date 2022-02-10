@@ -1,14 +1,15 @@
 jQuery(function($) {
 	
     var message = "";
+	var formData = JSON.stringify($("#contactform").serializeArray());
 
 	$(".button-success").on("click", function() {
       message = $("#contactform").serialize();
       $.ajax({
         url: "https://formspree.io/f/mwkylglg", 
         method: "POST",
-        data: {message: formData},
-        dataType: "json"
+		dataType: "json",
+        data: formData
       });
       $(".form-elements").hide();
       $(".thankyou_message").fadeIn();
