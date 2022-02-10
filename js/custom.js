@@ -323,10 +323,12 @@ jQuery(function($) {
 	// Square Feet to Acre
 	if ($('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
+		$(this).empty();
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	  $(".squareFeetCalculate").on("click", function(){
+		$(this).empty();
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
@@ -335,10 +337,12 @@ jQuery(function($) {
 	// Acre to Square Feet
 	if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
       $(".squareFeetCalculate").on("click", function(){
+		$(this).empty();
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	  $(".acreCalculate").on("click", function(){
+		$(this).empty();
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
