@@ -329,7 +329,7 @@ jQuery(function($) {
 	}
 	
 	// Acre to Square Feet
-	if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
+	else if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
       $(".squareFeetCalculate").on("click", function(){
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
