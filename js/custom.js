@@ -2,10 +2,10 @@ jQuery(function($) {
 	
 	var message = "";
 
-	$("#sendMessage").on("click", function() {
+	$(".button-success").on("click", function() {
 		message = $("#message").serialize();
 		$.ajax({
-			url: "//formspree.io/dynamicrealities@gmail.com", 
+			url: "https://formspree.io/f/mwkylglg", 
 			method: "POST",
 			data: {message: message},
 			dataType: "json"
