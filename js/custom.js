@@ -339,7 +339,7 @@ jQuery(function($) {
 	var inputValue = $(".calculatorInput").val();
 	
 	// Square Feet to Acre Conversion
-	if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green') && (inputValue > 0) {
+	if ($('.mowingWeekly').hasClass('green') && $('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
       $(".acreCalculate").on("click", function(){
 	    alert("Acre Clicked! Time to Convert.") 
 	  });
