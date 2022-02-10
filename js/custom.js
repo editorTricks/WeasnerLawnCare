@@ -7,7 +7,7 @@ jQuery(function($) {
       $.ajax({
         url: "https://formspree.io/f/mwkylglg", 
         method: "POST",
-        data: formData,
+        data: {message: formData},
         dataType: "json"
       });
       $(".form-elements").hide();
