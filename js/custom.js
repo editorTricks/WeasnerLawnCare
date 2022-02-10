@@ -317,32 +317,29 @@ jQuery(function($) {
 	  
     }
 	
-	// Convert Square Feet to Acre or Vice Versa
-	var inputValue = $(".calculatorInput").val();
-	
-	// Square Feet to Acre
-	if ($('.squareFeetCalculate').hasClass('green') && (inputValue > 0)) {
+	// Convert Square Feet to Acre
+	if ($('.squareFeetCalculate').hasClass('green')) {
       $(".acreCalculate").on("click", function(){
-		$(".calculatorInput").empty();
+        var inputValue = $(".calculatorInput").val();
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	  $(".squareFeetCalculate").on("click", function(){
-		$(".calculatorInput").empty();
+        var inputValue = $(".calculatorInput").val();
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	}
 	
-	// Acre to Square Feet
-	if ($('.acreCalculate').hasClass('green') && (inputValue > 0)) {
+	// Convert Acre to Square Feet
+	if ($('.acreCalculate').hasClass('green')) {
       $(".squareFeetCalculate").on("click", function(){
-		$(".calculatorInput").empty();
+		var inputValue = $(".calculatorInput").val();
 	    var convertedInputValue = (inputValue * 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
 	  $(".acreCalculate").on("click", function(){
-		$(".calculatorInput").empty();
+		var inputValue = $(".calculatorInput").val();
 	    var convertedInputValue = (inputValue / 43560);
 		$(".calculatorInput").val(convertedInputValue);
 	  });
