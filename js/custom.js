@@ -4,10 +4,6 @@ jQuery(function($) {
 
 $(".button-success").on("click", function() {
     message = $("#contactform").serialize();
-    $.ajax({
-        url: "https://formspree.io/f/mwkylglg", 
-        method: "POST"
-    });
     alert('Thanks for the email, we\'ll be in touch promptly.');
     return false;
 });
