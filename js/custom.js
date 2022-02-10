@@ -9,7 +9,7 @@ jQuery(function($) {
 			url: "https://formspree.io/f/mwkylglg", 
 			method: "POST",
 			data: {	
-					Name: name
+					Name: name,
 					message: message
 				},
 			dataType: "json"
