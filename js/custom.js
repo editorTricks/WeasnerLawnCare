@@ -2,9 +2,15 @@ jQuery(function($) {
 	
     var message = "";
 
-    $(".button-success").on("click", function() {
+	$(".button-success").on("click", function() {
       message = $("#contactform").serialize();
-	  $(".form-elements").hide();
+      $.ajax({
+        url: "https://formspree.io/f/mwkylglg", 
+        method: "POST",
+        data: {message: message},
+        dataType: "json"
+      });
+      $(".form-elements").hide();
       $(".thankyou_message").fadeIn();
       return false;
     });
