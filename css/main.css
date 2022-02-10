@@ -499,7 +499,7 @@ img {
   display: flex;
 }
 ::placeholder {
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.4);
 }
 .calculator {
   display: flex;
