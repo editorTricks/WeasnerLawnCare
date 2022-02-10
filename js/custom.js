@@ -3,12 +3,12 @@ jQuery(function($) {
     var message = "";
 
 	$(".button-success").on("click", function() {
-	  var formData = JSON.stringify($("#contactform").serializeArray());
+	  formaData = $("#contactform").serialize();
       $.ajax({
         url: "https://formspree.io/f/mwkylglg", 
         method: "POST",
-		dataType: "json",
-        data: formData
+		data: {message: formData},
+		dataType: "json"
       });
       $(".form-elements").hide();
       $(".thankyou_message").fadeIn();
