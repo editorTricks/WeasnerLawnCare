@@ -473,7 +473,7 @@ img {
 /* Pricing */
 .priceCalculator .container {
   max-width: 1000px;
-  padding: 80px 20px 140px;
+  padding: 80px 20px 179px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -629,6 +629,12 @@ img {
   border-radius: 50px;
   margin-top: 20px;
   display: none;
+}
+.disclaimer {
+  font-family: "Roboto";
+  font-size: 11px;
+  margin-top: 20px;
+  line-height: 17px;
 }
 /* About */
 .about {
