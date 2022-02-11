@@ -572,7 +572,7 @@ img {
 .priceCharts {
   display: none;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .priceChart {
   width: 31%;
@@ -581,6 +581,12 @@ img {
   box-sizing: border-box;
   border-radius: 25px;
   position: relative;
+}
+.priceChartWeekly {
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  top: 19.5px;
 }
 .serviceLabel {
   border-radius: 25px;
@@ -649,8 +655,19 @@ img {
 .disclaimer {
   font-family: "Roboto";
   font-size: 11px;
-  margin-top: 20px;
+  margin-top: 50px;
   line-height: 17px;
+}
+.mostPopular {
+  background: #f9c500;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 10px;
+  right: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-sizing: border-box;
 }
 /* About */
 .about {
@@ -1268,16 +1285,23 @@ h2.sectionTitleOne {
   }
   /* Price Calculator */
   .priceCalculator .container {
-    padding: 40px 20px 140px;
+    padding: 40px 20px 180px;
   }
   .priceCharts {
     flex-wrap: wrap;
+	margin-top: 59px;
   }
   .priceChart {
     width: 100%;
   }
   .priceChart:not(:last-child) {
     margin-bottom: 20px;
+  }
+  .priceChartWeekly {
+    top: 0;
+  }
+  .disclaimer {
+    margin-top: 15px;
   }
   /* About */
   .about .container {
