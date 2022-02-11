@@ -250,6 +250,17 @@ img {
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+.nav-6 {
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  display: inline-block;
+  background: #2abe0b;
+  border: 1px solid #2abe0b;
+}
+.nav-6:hover {
+  background: transparent;
+}
 /* Banner */
 .banner {
   background: url(../../images/lawn_seven.jpg);
@@ -459,160 +470,165 @@ img {
 .township {
   font-family: "Roboto";
 }
-/* Price Calculator */
+/* Pricing */
 .priceCalculator .container {
   max-width: 1000px;
   padding: 80px 20px 140px;
   box-sizing: border-box;
+  text-align: center;
 }
-.selection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.priceCalculator .container > p {
   margin-bottom: 40px;
 }
-.selection.lastSelection {
+.select {
   margin-bottom: 10px;
 }
-.selection:last-child {
-  margin-bottom: 0;
-}
-.priceCalculator p {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.priceCalculatorInput {
-  padding: 20px;
-  box-sizing: border-box;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+.dropDown {
   font-family: "Roboto";
-  width: 100%;
+  position: relative;
+}
+.dropDownCurrent {
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background: #f6f7f9;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.dropDownCurrentArrow {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.dropDownCurrentArrowIcon {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
-  max-width: 200px;
-  margin: 0 auto;
-  display: flex;
 }
-::placeholder {
-  color: rgba(0,0,0,0.4);
+.dropDownCurrentArrowIcon:after {
+  font-family: 'FontAwesome';
+  content: "\f078";
 }
-.calculator {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+.spin {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  
 }
-.calculatorButton {
-  padding: 10px 15px;
+.dropDownList {
+  padding: 20px;
   box-sizing: border-box;
-  border: 1px solid #2abe0b;
+  background: #f6f7f9;
+  border-radius: 50px;
+  margin-top: 20px;
+  display: none;
+}
+.dropDownListOption {
+  padding: 20px;
+  box-sizing: border-box;
   border-radius: 25px;
-  color: #2abe0b;
-  text-transform: uppercase;
-  font-weight: 900;
   cursor: pointer;
-  -webkit-transition: all 100ms ease;
-  -moz-transition: all 100ms ease;
-  -ms-transition: all 100ms ease;
-  -o-transition: all 100ms ease;
-  transition: all 100ms ease;
 }
-.calculatorButton.green {
-  background: #2abe0b;
-  color: #fff;
+.dropDownListOption:hover {
+  color: #2abe0b;
+  background: #fff;
 }
-.calculatorButton:hover {
-  background: #2abe0b;
-  color: #fff;
-  -webkit-transition: all 100ms ease;
-  -moz-transition: all 100ms ease;
-  -ms-transition: all 100ms ease;
-  -o-transition: all 100ms ease;
-  transition: all 100ms ease;
+.greenLabel {
+  color: #2abe0b;
 }
-.mowingWeekly,
-.squareFeetCalculate {
-  margin-right: 5px;
+.priceCharts {
+  display: none;
+  justify-content: space-between;
+  margin-top: 20px;
 }
-.mowingBiWeekly,
-.acreCalculate {
-  margin-left: 5px;
+.priceChart {
+  width: 31%;
+  background: #f6f7f9;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  position: relative;
 }
-.select {
-  flex-basis: 100%;
-  text-align: center;
-  margin-bottom: 15px;
+.serviceLabel {
+  border-radius: 25px;
+  padding: 15px 15px 5px;
   text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 900;
-  color: #777;
 }
-.calculatorInput {
-  max-width: 200px;
-  width: 100%;
+.price {
+  font-size: 58px;
+}
+.priceMore {
+  font-size: 12px;
+}
+.priceLabel {
+  font-size: 18px;
+}
+.priceChartServices {
+  margin-top: 20px;
+}
+.priceChartService {
+  font-family: "Roboto";
+}
+.priceChartService:not(:last-child) {
+  margin-bottom: 5px;
+}
+.priceChartService.green:after {
+  font-family: 'FontAwesome';
+  content: "\f058";
+  margin-left: 5px;
+  color: #2abe0b;
+}
+.priceChartService.red:after {
+  font-family: 'FontAwesome';
+  content: "\f057";
+  margin-left: 5px;
+  color: #DD0B1F;
+}
+.confirmQuote {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 1px solid #2abe0b;
+  background: #2abe0b;
+  color: #fff;
   padding: 15px;
   box-sizing: border-box;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  -webkit-transition: all 100ms ease;
-  -moz-transition: all 100ms ease;
-  -ms-transition: all 100ms ease;
-  -o-transition: all 100ms ease;
-  transition: all 100ms ease;
-  border-radius: 25px;
-}
-.calculatorInput:focus {
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  -webkit-transition: all 100ms ease;
-  -moz-transition: all 100ms ease;
-  -ms-transition: all 100ms ease;
-  -o-transition: all 100ms ease;
-  transition: all 100ms ease;
-}
-.noteConversion {
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  color: #ddd;
-  font-size: 11px;
-  font-weight: 400;
-}
-.results {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 70px;
-  font-weight: 900;
-  color: #2abe0b;
-  flex-basis: 100%;
-}
-.disclaimer {
-  font-style: italic;
-  color: #999;
-  font-size: 10px;
-  max-width: 400px;
-  margin: 10px auto 0;
-}
-.tip {
-  font-weight: 300;
-  font-size: 34px;
-  text-align: center;
-}
-.acreTip,
-.squareFeetTip {
   display: inline-block;
-  cursor: pointer;
+  border-radius: 25px;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.confirmQuote:hover {
+  background: transparent;
   color: #2abe0b;
 }
-.acreTip:hover,
-.squareFeetTip:hover  {
-  text-decoration: underline;
+.greaterThanOneAcre {
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f6f7f9;
+  border-radius: 50px;
+  margin-top: 20px;
+  display: none;
 }
 /* About */
 .about {

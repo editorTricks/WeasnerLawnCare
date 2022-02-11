@@ -39,323 +39,147 @@ jQuery(function($) {
       $(this).addClass("active");
     }
   });
+  
+  // Price Calculator
+  $(".dropDownCurrent").on("click", function(){
+	if ($(".dropDownList").is(":hidden")) {
+	  $(".dropDownList").slideDown();
+	  $(".dropDownCurrentArrowIcon").addClass("spin");
+	}
+	else {
+      $(".dropDownList").slideUp();
+	  $(".dropDownCurrentArrowIcon").removeClass("spin");
+	}
+  }); 
+  
+  $(".dropDownListOption").on("click", function(){
+	$(".dropDownCurrentArrowIcon").removeClass("spin");
+    if ($(".greaterThanOneAcre").is(":visible")) {
+	  $(".greaterThanOneAcre").hide();	
+	}
+  }); 
+ 
+  // Up to 10,000 sqft (0.22 acres)
+  $(".dropDownListOptionOne").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption).addClass("greenLabel");
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$40");
+	$(".priceChartBiWeekly .priceNumber").append("$60");
+  });
+  
+  // Between 10,001 and 15,000 sqft (0.22 and 0.34 acres)
+  $(".dropDownListOptionTwo").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$45");
+	$(".priceChartBiWeekly .priceNumber").append("$67.50");
+  });
+  
+  // Between 15,001 and 20,000 sqft (0.34 and 0.45 acres)
+  $(".dropDownListOptionThree").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$50");
+	$(".priceChartBiWeekly .priceNumber").append("$75");
+  });
+  
+  // Between 20,001 and 25,000 sqft (0.45 and 0.57 acres)
+  $(".dropDownListOptionFour").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$55");
+	$(".priceChartBiWeekly .priceNumber").append("$82.50");
+  });
+  
+  // Between 25,001 and 30,000 sqft (0.57 and 0.68 acres)
+  $(".dropDownListOptionFive").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$60");
+	$(".priceChartBiWeekly .priceNumber").append("$90");
+  });
+  
+  // Between 30,001 and 35,000 sqft (0.68 and 0.80 acres)
+  $(".dropDownListOptionSix").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$65");
+	$(".priceChartBiWeekly .priceNumber").append("$97.5");
+  });
+  
+  // Between 35,001 and 40,000 sqft (0.80 and 0.91 acres)
+  $(".dropDownListOptionSeven").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$70");
+	$(".priceChartBiWeekly .priceNumber").append("$105");
+  });
+  
+  // Between 40,001 and 43,560 sqft (0.91 and 1 acre)
+  $(".dropDownListOptionEight").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").css("display", "flex");
+	$(".dropDownList").slideUp();
+	$(".priceNumber").empty();
+    $(".priceChartWeekly .priceNumber").append("$75");
+	$(".priceChartBiWeekly .priceNumber").append("$112.50");
+  });
+  
+  // Greater than 1 acre
+  $(".dropDownListOptionNine").on("click", function(){
+	$(".dropDownListOption").removeClass("greenLabel");
+	$(this).addClass("greenLabel");
+	var listOption = $(this).text();
+    $(".dropDownCurrentLabel").text(listOption);
+	$(".priceCharts").hide();
+	$(".dropDownList").slideUp();
+	$(".greaterThanOneAcre").slideDown();
+  });
 
   // Header Animation
   $(".header").addClass("show animated slideInDown");
   
   // Banner Animation
   $(".banner .container").addClass("show animated fadeIn");
-  
-  // Price Calculator
-  $(".calculatorButton").on("click", function(){
-	  
-	// Clear Input Value When Button is Clicked  
-	$('.calculatorInput').val('');
 	
-	// Apply Green Color to Buttons Accordingly
-    if ($(this).hasClass("green")) {
-      $(this).removeClass("green");
-	} 
-	else if (!$(this).hasClass("green")) {
-	  $(this).parent().find(".calculatorButton").removeClass("green");
-	  $(this).addClass("green");
-	}
-  });
-  
-  // Change Placeholder
-  $(".squareFeetCalculate").on("click", function() {
-    $('.calculatorInput').attr('placeholder','23,750 square feet'); 
-  });
-  
-  $(".acreCalculate").on("click", function() {
-    $('.calculatorInput').attr('placeholder','0.24 acres'); 
-  });
-  
-  // Mowing & Square Feet Buttons
-  var disclaimer = "*The price above is only an estimate based on limited information. The actual cost may be slighty more or less depending on factors such as tree count, yard accessibility, topography, time of the year, etc. We'll happily survey your yard and provide you with an exact cost to complete the job.";
-	
-  function calculate() {
-	
-	// Remove Results
-	$(".results, .disclaimer").empty();
-	
-	// Weekly Mowing + Square Feet
-    function weeklySquareFeetCost() {
-		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
-		
-		// Input Box Value
-	    var inputValue = $(".calculatorInput").val();
-		var convertedInputValue = (inputValue / 43560);
-		var convertedInputValueComma = convertedInputValue.toLocaleString();
-		$(".noteConversion").empty();
-		
-		// Pricing		
-		if ((inputValue > 0) && (inputValue <= 5000)) {
-          $(".results").append("$40*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 5000) && (inputValue <= 10000)) {
-          $(".results").append("$40*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 10000) && (inputValue <= 15000)) {
-          $(".results").append("$45*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 15000) && (inputValue <= 20000)) {
-          $(".results").append("$50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 20000) && (inputValue <= 25000)) {
-          $(".results").append("$55*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 25000) && (inputValue <= 30000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 30000) && (inputValue <= 35000)) {
-          $(".results").append("$65*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 35000) && (inputValue <= 40000)) {
-          $(".results").append("$70*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-        }
-	    else if ((inputValue > 40000) && (inputValue <= 43560)) {
-          $(".results").append("$75*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Acres");
-	    }
-	    else if (inputValue > 43560) {
-          $(".tip").append(tip).addClass("animated shake");
-        }
-		
-	}
-	
-	// Weekly Mowing + Acre
-	function weeklyAcreCost() {
-		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
-		
-		// Input Box Value
-	    var inputValue = $(".calculatorInput").val();
-		var convertedInputValue = (inputValue * 43560);
-		var convertedInputValueComma = convertedInputValue.toLocaleString();
-		$(".noteConversion").empty();
-		
-		// Pricing		
-		if ((convertedInputValue > 0) && (convertedInputValue <= 5000)) {
-          $(".results").append("$40*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 5000) && (convertedInputValue <= 10000)) {
-          $(".results").append("$40*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 10000) && (convertedInputValue <= 15000)) {
-          $(".results").append("$45*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 15000) && (convertedInputValue <= 20000)) {
-          $(".results").append("$50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 20000) && (convertedInputValue <= 25000)) {
-          $(".results").append("$55*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 25000) && (convertedInputValue <= 30000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 30000) && (convertedInputValue <= 35000)) {
-          $(".results").append("$65*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 35000) && (convertedInputValue <= 40000)) {
-          $(".results").append("$70*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 40000) && (convertedInputValue <= 43560)) {
-          $(".results").append("$75*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-	    }
-	    else if (convertedInputValue > 43560) {
-          $(".tip").append(tip).addClass("animated shake");
-        }
-
-	}
-	
-	// Bi-Weekly Mowing + Square Feet
-    function biWeeklySquareFeetCost() {
-		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
-		
-		// Input Box Value
-	    var inputValue = $(".calculatorInput").val();
-		
-		// Pricing		
-		if ((inputValue > 0) && (inputValue <= 5000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 5000) && (inputValue <= 10000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 10000) && (inputValue <= 15000)) {
-          $(".results").append("$67.50*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 15000) && (inputValue <= 20000)) {
-          $(".results").append("$75*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 20000) && (inputValue <= 25000)) {
-          $(".results").append("$82.50*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 25000) && (inputValue <= 30000)) {
-          $(".results").append("$90*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 30000) && (inputValue <= 35000)) {
-          $(".results").append("$97.50*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 35000) && (inputValue <= 40000)) {
-          $(".results").append("$105*");
-	      $(".disclaimer").append(disclaimer);
-        }
-	    else if ((inputValue > 40000) && (inputValue <= 43560)) {
-          $(".results").append("$112.50*");
-	      $(".disclaimer").append(disclaimer);
-	    }
-	    else if (inputValue > 43560) {
-          $(".tip").append(tip).addClass("animated shake");
-        }
-		
-	}
-	
-	// Bi-Weekly Mowing + Acre
-	function biWeeklyAcreCost() {
-		
-		var tip = "Unfortunately, we do not provide mowing services for lot sizes greater than 1 acre at this time.";
-		
-		// Input Box Value
-	    var inputValue = $(".calculatorInput").val();
-		var convertedInputValue = (inputValue * 43560);
-		var convertedInputValueComma = convertedInputValue.toLocaleString();
-		$(".noteConversion").empty();
-		
-		// Pricing		
-		if ((convertedInputValue > 0) && (convertedInputValue <= 5000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 5000) && (convertedInputValue <= 10000)) {
-          $(".results").append("$60*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 10000) && (convertedInputValue <= 15000)) {
-          $(".results").append("$67.50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 15000) && (convertedInputValue <= 20000)) {
-          $(".results").append("$75*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 20000) && (convertedInputValue <= 25000)) {
-          $(".results").append("$82.50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 25000) && (convertedInputValue <= 30000)) {
-          $(".results").append("$90*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 30000) && (convertedInputValue <= 35000)) {
-          $(".results").append("$97.50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 35000) && (convertedInputValue <= 40000)) {
-          $(".results").append("$105*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-        }
-	    else if ((convertedInputValue > 40000) && (convertedInputValue <= 43560)) {
-          $(".results").append("$112.50*");
-	      $(".disclaimer").append(disclaimer);
-		  $(".noteConversion").append(convertedInputValueComma + " Square Feet");
-	    }
-	    else if (convertedInputValue > 43560) {
-          $(".tip").append(tip).addClass("animated shake");
-        }
-
-	}
-	
-	// Mowing Weekly Activation	
-    if ($('.mowingWeekly').hasClass('green')) {
-		
-	  if ($('.squareFeetCalculate').hasClass('green')) {
-		weeklySquareFeetCost();
-	  }
-	  else if ($('.acreCalculate').hasClass('green')) {
-		weeklyAcreCost();
-	  }
-	  
-    }
-	
-	// Mowing Bi-Weekly Activation
-	else if ($('.mowingBiWeekly').hasClass('green')) {
-		
-	  if ($('.squareFeetCalculate').hasClass('green')) {
-		biWeeklySquareFeetCost();
-	  }
-	  else if ($('.acreCalculate').hasClass('green')) {
-		biWeeklyAcreCost();
-	  }
-	  
-    }	
-  }
-  
-  // Calculate When a Button is Clicked
-  $(".calculatorButton").on("click", function(){
-    calculate();
-  });
-  
-  // Calculate When a Number is Added
-  $(".calculatorInput").on("keyup", function() {
-    calculate();
-  });
-  
-  calculate();
-  
   // Mobile Navigation
   $('.hamburger').on('click', function(){
     $('.mobileMenu, .mobileNavigation').toggleClass('slide');
@@ -421,7 +245,7 @@ jQuery(function($) {
     $('html,body').animate({scrollTop: $(".frequentlyAskedQuestions").offset().top + -60},'slow');
   });
   
-  $(".nav-6, .schedule").click(function() {
+  $(".nav-6, .schedule, .confirmQuote").click(function() {
     $('html,body').animate({scrollTop: $(".contact").offset().top + -60},'slow');
   });
   
