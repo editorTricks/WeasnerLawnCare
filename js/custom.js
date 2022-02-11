@@ -64,7 +64,7 @@ jQuery(function($) {
 	$(".dropDownListOption").removeClass("greenLabel");
 	$(this).addClass("greenLabel");
 	var listOption = $(this).text();
-    $(".dropDownCurrentLabel").text(listOption).addClass("greenLabel");
+    $(".dropDownCurrentLabel").text(listOption);
 	$(".priceCharts").css("display", "flex");
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
