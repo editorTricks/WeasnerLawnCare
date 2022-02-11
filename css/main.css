@@ -1257,6 +1257,15 @@ h2.sectionTitleOne {
   .priceCalculator .container {
     padding: 40px 20px 140px;
   }
+  .priceCharts {
+    flex-wrap: wrap;
+  }
+  .priceChart {
+    width: 100%;
+  }
+  .priceChart:not(:last-child) {
+    margin-bottom: 20px;
+  }
   /* About */
   .about .container {
     padding: 40px 20px;
