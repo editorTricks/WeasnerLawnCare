@@ -461,17 +461,14 @@ img {
   font-weight: 900;
   font-size: 32px;
 }
+.pennsylvania {
+  margin-top: 10px;
+}
 .township {
   font-size: 120px;
   line-height: 120px;
   font-family: "Edo";
   font-weight: initial;
-}
-.pennsylvania {
-  margin-top: 10px;
-}
-.township {
-  font-family: "Roboto";
 }
 /* Pricing */
 .priceCalculator .container {
