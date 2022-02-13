@@ -462,7 +462,10 @@ img {
   font-size: 32px;
 }
 .township {
-  margin-top: 2px;
+  font-size: 120px;
+  line-height: 120px;
+  font-family: "Edo";
+  font-weight: initial;
 }
 .pennsylvania {
   margin-top: 10px;
@@ -989,7 +992,8 @@ h2.sectionTitleOne {
   .locationLeft, .locationRight {
     padding: 40px;
   }
-  .locationLeftH2One {
+  .locationLeftH2One,
+  .township  {
     font-size: 100px;
     line-height: 100px;
   }
@@ -1279,7 +1283,8 @@ h2.sectionTitleOne {
   .locationLeft, .locationRight {
     padding: 20px;
   }
-  .locationLeftH2One {
+  .locationLeftH2One,
+  .township  {
     font-size: 65px;
     line-height: 65px;
   }
