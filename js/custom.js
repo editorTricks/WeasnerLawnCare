@@ -69,7 +69,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$40");
-	$(".priceChartBiWeekly .priceNumber").append("$60");
+	$(".priceChartBiWeekly .priceNumber").append("$50");
   });
   
   // Between 10,001 and 15,000 sqft (0.22 and 0.34 acres)
@@ -82,7 +82,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$45");
-	$(".priceChartBiWeekly .priceNumber").append("$67.50");
+	$(".priceChartBiWeekly .priceNumber").append("$60");
   });
   
   // Between 15,001 and 20,000 sqft (0.34 and 0.45 acres)
@@ -95,7 +95,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$50");
-	$(".priceChartBiWeekly .priceNumber").append("$75");
+	$(".priceChartBiWeekly .priceNumber").append("$70");
   });
   
   // Between 20,001 and 25,000 sqft (0.45 and 0.57 acres)
@@ -108,7 +108,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$55");
-	$(".priceChartBiWeekly .priceNumber").append("$82.50");
+	$(".priceChartBiWeekly .priceNumber").append("$80");
   });
   
   // Between 25,001 and 30,000 sqft (0.57 and 0.68 acres)
@@ -134,7 +134,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$65");
-	$(".priceChartBiWeekly .priceNumber").append("$97.5");
+	$(".priceChartBiWeekly .priceNumber").append("$100");
   });
   
   // Between 35,001 and 40,000 sqft (0.80 and 0.91 acres)
@@ -147,7 +147,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$70");
-	$(".priceChartBiWeekly .priceNumber").append("$105");
+	$(".priceChartBiWeekly .priceNumber").append("$110");
   });
   
   // Between 40,001 and 43,560 sqft (0.91 and 1 acre)
@@ -160,7 +160,7 @@ jQuery(function($) {
 	$(".dropDownList").slideUp();
 	$(".priceNumber").empty();
     $(".priceChartWeekly .priceNumber").append("$75");
-	$(".priceChartBiWeekly .priceNumber").append("$112.50");
+	$(".priceChartBiWeekly .priceNumber").append("$120");
   });
   
   // Greater than 1 acre
