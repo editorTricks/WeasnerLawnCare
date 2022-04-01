@@ -871,6 +871,9 @@ h2.sectionTitleOne {
 .contactFormLabel {
   margin-bottom: 10px;
   margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 600;
 }
 .thankyou_message {
   display: none;
