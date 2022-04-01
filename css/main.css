@@ -865,6 +865,10 @@ h2.sectionTitleOne {
   text-align: center;
   margin-bottom: 40px;
 }
+.contactFormLabel {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 .thankyou_message {
   display: none;
 }
@@ -946,7 +950,7 @@ h2.sectionTitleOne {
   display: flex;
   flex-direction: column;
 }
-.form-elements> *:not(:last-child):not(h2):not(p) {
+.form-elements> *:not(:last-child):not(h2):not(p):not(label) {
   margin-bottom: 20px;
 }
 .pure-form input,
