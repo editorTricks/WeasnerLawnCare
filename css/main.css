@@ -411,12 +411,12 @@ img {
 }
 .locationMiddle {
   width: 150px;
-  background: rgba(42, 190, 11, 0.5);
+  background: rgba(42, 190, 11, 0.3);
   -webkit-clip-path: polygon(100% 0,0% 100%,100% 100%);
   clip-path: polygon(100% 0,0% 100%,100% 100%);
 }
 .locationRight {
-  background: rgba(42, 190, 11, 0.5);
+  background: rgba(42, 190, 11, 0.3);
   display: flex;
   align-items: center;
   color: #fff;
