@@ -394,7 +394,7 @@ img {
 }
 .locations > .container {
   display: flex;
-  background: url(../../images/wlc_map.jpg);
+  background: url(../../images/wlc_map_2.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -445,7 +445,7 @@ img {
   margin-right: 5px;
   font-weight: initial;
   font-size: 212px;
-  color: #2abe0b;
+  color: #f9c500;
   position: absolute;
   left: -65px;
 }
