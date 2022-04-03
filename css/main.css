@@ -425,6 +425,7 @@ img {
 }
 .locationRight .container {
   position: relative;
+  text-shadow: 0 0 20px #000;
 }
 .locationLeft {
   color: #fff;
