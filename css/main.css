@@ -336,7 +336,7 @@ img {
   position: relative;
   z-index: 1;
 }
-.services a.schedule {
+.schedule {
   text-transform: uppercase;
   font-weight: 900;
   border: 1px solid #2abe0b;
@@ -350,7 +350,7 @@ img {
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-.services a.schedule:hover {
+.schedule:hover {
   background: #2abe0b;
   color: #fff;
   -webkit-transition: all 300ms ease;
